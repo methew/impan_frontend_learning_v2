@@ -38,7 +38,7 @@ function SettingsPage() {
 
   // Local state for form values
   const [theme, setTheme] = useState(coreSettings?.theme || 'light')
-  const [language, setLanguage] = useState(coreSettings?.language || 'zh')
+  const [language, setLanguage] = useState<'zh' | 'en' | 'ja'>(coreSettings?.language || 'zh')
   const [notifications, setNotifications] = useState(coreSettings?.notifications_enabled ?? true)
   
   const [dailyGoalMinutes, setDailyGoalMinutes] = useState(learningSettings?.daily_goal_minutes || 30)
@@ -111,7 +111,7 @@ function SettingsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label>{t('settings.theme')}</Label>
-                  <Select value={theme} onValueChange={setTheme}>
+                  <Select value={theme} onValueChange={(v) => setTheme(v as typeof theme)}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -125,7 +125,7 @@ function SettingsPage() {
 
                 <div className="space-y-2">
                   <Label>{t('settings.language')}</Label>
-                  <Select value={language} onValueChange={setLanguage}>
+                  <Select value={language} onValueChange={(v) => setLanguage(v as typeof language)}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>

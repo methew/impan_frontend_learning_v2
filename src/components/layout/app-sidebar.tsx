@@ -194,11 +194,11 @@ export function AppSidebar() {
                 side="top"
                 className="w-[--radix-popper-anchor-width]"
               >
-                <DropdownMenuItem asChild>
-                  <Link to="/profile">
+                <DropdownMenuItem disabled>
+                  <span className="flex items-center">
                     <User className="mr-2 size-4" />
                     {t('nav.profile')}
-                  </Link>
+                  </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/settings">

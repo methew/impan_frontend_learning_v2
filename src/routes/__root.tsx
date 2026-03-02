@@ -6,8 +6,7 @@ import {
   LogOut, 
   Settings, 
   ChevronDown,
-  Loader2,
-  GraduationCap
+  Loader2
 } from 'lucide-react'
 import { isAuthenticated } from '@/lib/auth'
 import { useAuthUser, useLogout, getUserDisplayName, getUserInitials } from '@/hooks/useAuthUser'
@@ -91,11 +90,11 @@ function TopNavigation() {
             <p className="text-xs text-muted-foreground truncate">{user?.email}</p>
           </div>
           <DropdownMenuSeparator />
-          <DropdownMenuItem asChild>
-            <Link to="/profile">
+          <DropdownMenuItem disabled>
+            <span className="flex items-center">
               <User className="mr-2 size-4" />
               {t('nav.profile')}
-            </Link>
+            </span>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link to="/settings">

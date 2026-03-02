@@ -6,7 +6,7 @@
 // ========== Core Settings ==========
 export interface CoreSettings {
   theme: 'light' | 'dark' | 'system'
-  language: 'zh' | 'en'
+  language: 'zh' | 'en' | 'ja'
   timezone: string
   date_format: string
   time_format: '12h' | '24h'

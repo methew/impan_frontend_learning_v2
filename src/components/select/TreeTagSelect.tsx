@@ -3,7 +3,7 @@
  * 支持树形结构展示、搜索过滤、多选
  */
 import { useState, useMemo } from 'react'
-import { ChevronRight, ChevronDown, Search, Check, X, Tag } from 'lucide-react'
+import { ChevronRight, ChevronDown, Search, Check, X, Tag as TagIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
@@ -69,13 +69,13 @@ function TagTreeItem({
   const hasChildren = tag.children && tag.children.length > 0
   const isExpanded = expandedIds.has(tag.id)
   const isSelected = values.includes(tag.id)
-  const displayName = tag.title_zh || tag.title || tag.name
+  const displayName = tag.title_zh || tag.title
   
   const matchesSearch = searchQuery === '' || 
     displayName.toLowerCase().includes(searchQuery.toLowerCase())
   
   const childrenMatchSearch = hasChildren && tag.children?.some(child =>
-    (child.title_zh || child.title || child.name).toLowerCase().includes(searchQuery.toLowerCase())
+    (child.title_zh || child.title || '').toLowerCase().includes(searchQuery.toLowerCase())
   )
   
   const shouldShow = searchQuery === '' || matchesSearch || childrenMatchSearch
@@ -120,7 +120,7 @@ function TagTreeItem({
           {isSelected && <Check className="size-3 text-primary-foreground" />}
         </div>
         
-        <Tag className="size-3 text-muted-foreground mr-1 shrink-0" />
+        <TagIcon className="size-3 text-muted-foreground mr-1 shrink-0" />
         
         <span className="flex-1 truncate">{displayName}</span>
       </div>
@@ -213,8 +213,8 @@ export function TreeTagSelect({
                     variant="secondary"
                     className="flex items-center gap-1"
                   >
-                    <Tag className="size-3" />
-                    {tag.title_zh || tag.title || tag.name}
+                    <TagIcon className="size-3" />
+                    {tag.title_zh || tag.title}
                     <X
                       className="size-3 cursor-pointer hover:text-red-500"
                       onClick={(e) => {
