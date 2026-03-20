@@ -1,15 +1,14 @@
-import { createFileRoute, Link, useParams } from '@tanstack/react-router'
+import { createFileRoute, useParams } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import { 
   TreeDeciduous, 
   FlaskConical,
   BookOpen,
-  ChevronRight,
   Search,
   ChevronDown,
   ChevronUp
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'

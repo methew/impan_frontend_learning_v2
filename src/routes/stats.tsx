@@ -5,8 +5,7 @@ import {
   BookOpen,
   ClipboardList,
   TrendingUp,
-  Award,
-  Calendar
+  Award
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'

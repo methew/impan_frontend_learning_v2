@@ -4,7 +4,6 @@ import {
   GraduationCap, 
   Calendar,
   Clock,
-  Users,
   Trophy,
   ArrowRight
 } from 'lucide-react'
@@ -13,7 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
 import * as api from '@/api/exams'
-import type { PeriodicExam, PeriodicExamSession, PeriodicExamParticipant } from '@/types'
+import type { PeriodicExam, PeriodicExamParticipant } from '@/types'
 
 export const Route = createFileRoute('/periodic')({
   component: PeriodicExamsPage,

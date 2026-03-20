@@ -67,7 +67,7 @@ function HomePage() {
           系统化的语言学习内容，配合多样化的考试模式，助你高效学习
         </p>
         <div className="flex justify-center gap-4 pt-4">
-          <Link to="/learning">
+          <Link to="/learning/$type" params={{ type: 'vocab' }}>
             <Button size="lg">
               开始学习
               <ArrowRight className="ml-2 h-4 w-4" />

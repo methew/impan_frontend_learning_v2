@@ -4,8 +4,7 @@ import type {
   GramNode, 
   IdiomNode, 
   TextLessonNode,
-  ExampleSentence,
-  PaginatedResponse 
+  ExampleSentence
 } from '@/types'
 
 // ============================================================================
