@@ -1,35 +1,117 @@
 import axios from 'axios'
+import { 
+  getAccessToken, 
+  getRefreshToken, 
+  clearTokens,
+  isTokenExpired,
+  refreshTokenApi 
+} from './auth'
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 30000,
 })
 
-// Request interceptor to add auth token
+// Global flag to prevent concurrent token refresh
+let isRefreshing = false
+let refreshSubscribers: Array<(token: string | null) => void> = []
+
+function subscribeTokenRefresh(callback: (token: string | null) => void) {
+  refreshSubscribers.push(callback)
+}
+
+function onTokenRefreshed(newToken: string | null) {
+  refreshSubscribers.forEach((callback) => callback(newToken))
+  refreshSubscribers = []
+}
+
+// Request interceptor
 apiClient.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('access_token')
+  async (config) => {
+    // Check if token is about to expire and refresh proactively
+    if (isTokenExpired()) {
+      const refreshToken = getRefreshToken()
+      if (refreshToken) {
+        try {
+          const response = await refreshTokenApi(refreshToken)
+          config.headers.Authorization = `Bearer ${response.access}`
+          return config
+        } catch {
+          // Continue with current token
+        }
+      }
+    }
+    
+    const token = getAccessToken()
     if (token) {
       config.headers.Authorization = `Bearer ${token}`
     }
     return config
   },
-  (error) => {
-    return Promise.reject(error)
-  }
+  (error) => Promise.reject(error)
 )
 
-// Response interceptor for error handling
+// Flag to prevent multiple redirects
+let isRedirecting = false
+
+// Response interceptor
 apiClient.interceptors.response.use(
   (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('access_token')
-      window.location.href = '/login'
+  async (error) => {
+    const originalRequest = error.config
+    
+    if (error.response?.status !== 401 || originalRequest._retry) {
+      return Promise.reject(error)
     }
-    return Promise.reject(error)
+    
+    originalRequest._retry = true
+    
+    if (isRefreshing) {
+      return new Promise((resolve, reject) => {
+        subscribeTokenRefresh((newToken: string | null) => {
+          if (newToken) {
+            originalRequest.headers.Authorization = `Bearer ${newToken}`
+            resolve(apiClient(originalRequest))
+          } else {
+            reject(new Error('Token refresh failed'))
+          }
+        })
+      })
+    }
+    
+    isRefreshing = true
+    
+    try {
+      const refreshToken = getRefreshToken()
+      if (!refreshToken) {
+        throw new Error('No refresh token')
+      }
+      
+      const response = await refreshTokenApi(refreshToken)
+      onTokenRefreshed(response.access)
+      
+      originalRequest.headers.Authorization = `Bearer ${response.access}`
+      return apiClient(originalRequest)
+    } catch (refreshError) {
+      onTokenRefreshed(null)
+      clearTokens()
+      
+      const currentPath = window.location.pathname
+      if (currentPath !== '/login' && !isRedirecting) {
+        isRedirecting = true
+        setTimeout(() => {
+          window.location.href = '/login'
+          setTimeout(() => { isRedirecting = false }, 500)
+        }, 100)
+      }
+      
+      return Promise.reject(refreshError)
+    } finally {
+      isRefreshing = false
+    }
   }
 )
 
