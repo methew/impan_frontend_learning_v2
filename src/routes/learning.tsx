@@ -1,4 +1,4 @@
-import { createFileRoute, useParams } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import { 
   TreeDeciduous, 
@@ -6,7 +6,8 @@ import {
   BookOpen,
   Search,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Plus
 } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -14,10 +15,11 @@ import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
 import * as api from '@/api/learning'
+import { useGenerateFlashcardsFromNodes } from '@/hooks/useFlashcards'
 import type { BaseNode, ExampleSentence } from '@/types'
 import { cn } from '@/lib/utils'
 
-export const Route = createFileRoute('/learning/$type')({
+export const Route = createFileRoute('/learning')({
   component: LearningPage,
 })
 
@@ -49,9 +51,9 @@ const typeConfig = {
 }
 
 function LearningPage() {
-  const { type } = useParams({ from: '/learning/$type' })
-  const config = typeConfig[type as keyof typeof typeConfig]
-  const Icon = config?.icon || BookOpen
+  const [activeType] = useState<keyof typeof typeConfig>('vocab')
+  const config = typeConfig[activeType]
+  const Icon = config.icon
   
   const [nodes, setNodes] = useState<BaseNode[]>([])
   const [selectedNode, setSelectedNode] = useState<BaseNode | null>(null)
@@ -62,7 +64,7 @@ function LearningPage() {
   
   useEffect(() => {
     loadNodes()
-  }, [type])
+  }, [activeType])
   
   useEffect(() => {
     if (selectedNode) {
@@ -88,11 +90,11 @@ function LearningPage() {
   const loadExamples = async (nodeId: string) => {
     try {
       let data: ExampleSentence[] = []
-      if (type === 'vocab') {
+      if (activeType === 'vocab') {
         data = await api.getVocabNodeExamples(nodeId)
-      } else if (type === 'grammar') {
+      } else if (activeType === 'grammar') {
         data = await api.getGramNodeExamples(nodeId)
-      } else if (type === 'idiom') {
+      } else if (activeType === 'idiom') {
         data = await api.getIdiomNodeExamples(nodeId)
       }
       setExamples(data)
@@ -217,6 +219,7 @@ function LearningPage() {
             <CardHeader>
               <div className="flex items-center gap-2">
                 <Badge>{selectedNode.node_type}</Badge>
+                <AddToFlashcardButton node={selectedNode} />
               </div>
               <CardTitle className="text-2xl">{selectedNode.name}</CardTitle>
             </CardHeader>
@@ -273,5 +276,43 @@ function LearningPage() {
         )}
       </div>
     </div>
+  )
+}
+
+// 添加到闪卡按钮
+function AddToFlashcardButton({ node }: { node: BaseNode }) {
+  const generateFlashcards = useGenerateFlashcardsFromNodes()
+  
+  const handleAdd = () => {
+    // 根据 activeType 确定节点类型
+    // 使用 'vocab' 作为默认值，后续可以根据学习内容动态调整
+    const nodeType = 'vocab'
+    
+    generateFlashcards.mutate(
+      { nodeType, nodeIds: [node.id] },
+      {
+        onSuccess: () => {
+          toast.success('已添加到闪卡', {
+            description: `${node.name} 已加入闪卡包`,
+          })
+        },
+        onError: () => {
+          toast.error('添加失败', {
+            description: '请稍后重试',
+          })
+        },
+      }
+    )
+  }
+  
+  return (
+    <button
+      onClick={handleAdd}
+      className="flex items-center gap-1 px-2 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+      disabled={generateFlashcards.isPending}
+    >
+      <Plus className="h-3 w-3" />
+      {generateFlashcards.isPending ? '添加中...' : '加入闪卡'}
+    </button>
   )
 }

@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import { GraduationCap, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -6,14 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
-import { setToken, setUser } from '@/lib/auth'
 
 export const Route = createFileRoute('/login')({
   component: LoginPage,
 })
 
 function LoginPage() {
-  const navigate = useNavigate()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -29,17 +28,24 @@ function LoginPage() {
     setIsLoading(true)
     
     try {
-      // This is a mock login - replace with actual API endpoint
-      // const response = await apiClient.post('/auth/login/', { email, password })
-      // setToken(response.data.access)
-      // setUser(response.data.user)
+      // Mock login for development
+      const mockToken = 'mock_token_' + Date.now()
+      const mockRefreshToken = 'mock_refresh_' + Date.now()
       
-      // Mock for development
-      setToken('mock_token_' + Date.now())
-      setUser({ id: '1', email, username: email.split('@')[0] })
+      // Set tokens
+      localStorage.setItem('access_token', mockToken)
+      localStorage.setItem('refresh_token', mockRefreshToken)
+      localStorage.setItem('token_expires_at', (Date.now() + 30 * 60 * 1000).toString())
+      localStorage.setItem('user', JSON.stringify({ 
+        id: '1', 
+        email, 
+        username: email.split('@')[0] 
+      }))
       
       toast.success('登录成功')
-      navigate({ to: '/' })
+      
+      // Force page reload to trigger auth state update
+      window.location.href = '/'
     } catch (error) {
       toast.error('登录失败，请检查邮箱和密码')
     } finally {

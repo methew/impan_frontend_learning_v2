@@ -7,7 +7,9 @@ import {
   ArrowRight,
   Sparkles,
   TreeDeciduous,
-  FlaskConical
+  FlaskConical,
+  Layers,
+  PenTool,
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -26,33 +28,47 @@ function HomePage() {
       color: 'bg-blue-500',
     },
     {
+      icon: Layers,
+      title: '闪卡复习',
+      description: 'FSRS 间隔重复记忆',
+      to: '/learning/flashcards',
+      color: 'bg-purple-500',
+    },
+    {
+      icon: PenTool,
+      title: '写作练习',
+      description: '句子仿写、写作提示',
+      to: '/learning/writing',
+      color: 'bg-green-500',
+    },
+    {
       icon: ClipboardList,
       title: '模拟考试',
       description: '各种题型的模拟考试练习',
       to: '/exams',
-      color: 'bg-green-500',
+      color: 'bg-orange-500',
     },
     {
       icon: GraduationCap,
       title: '周期考试',
       description: '每日/每周/每月定期考试',
       to: '/periodic',
-      color: 'bg-purple-500',
+      color: 'bg-red-500',
     },
     {
       icon: BarChart3,
       title: '学习统计',
       description: '查看学习进度和考试统计',
       to: '/stats',
-      color: 'bg-orange-500',
+      color: 'bg-cyan-500',
     },
   ]
 
   const learningTypes = [
-    { icon: TreeDeciduous, title: '词汇', to: '/learning/vocab', color: 'bg-emerald-500' },
-    { icon: FlaskConical, title: '语法', to: '/learning/grammar', color: 'bg-cyan-500' },
-    { icon: BookOpen, title: '惯用语', to: '/learning/idiom', color: 'bg-indigo-500' },
-    { icon: BookOpen, title: '课文', to: '/learning/text', color: 'bg-rose-500' },
+    { icon: TreeDeciduous, title: '词汇', to: '/learning', color: 'bg-emerald-500' },
+    { icon: FlaskConical, title: '语法', to: '/learning', color: 'bg-cyan-500' },
+    { icon: BookOpen, title: '惯用语', to: '/learning', color: 'bg-indigo-500' },
+    { icon: BookOpen, title: '课文', to: '/learning', color: 'bg-rose-500' },
   ]
 
   return (
@@ -67,7 +83,7 @@ function HomePage() {
           系统化的语言学习内容，配合多样化的考试模式，助你高效学习
         </p>
         <div className="flex justify-center gap-4 pt-4">
-          <Link to="/learning/$type" params={{ type: 'vocab' }}>
+          <Link to="/learning">
             <Button size="lg">
               开始学习
               <ArrowRight className="ml-2 h-4 w-4" />
