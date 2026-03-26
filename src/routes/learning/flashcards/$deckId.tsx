@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { useMemo } from 'react'
 import { ArrowLeft, Play, Plus, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useDeck, useDeckStats, useDeleteDeck, useFlashcards, useDeleteFlashcard } from '@/hooks/useFlashcards'
+import type { Flashcard } from '@/types'
 import { format } from 'date-fns'
 
 export const Route = createFileRoute('/learning/flashcards/$deckId')({
@@ -15,7 +17,11 @@ function DeckDetailPage() {
   const { deckId } = Route.useParams()
   const { data: deck } = useDeck(deckId)
   const { data: stats } = useDeckStats(deckId)
-  const { data: cards } = useFlashcards(deckId)
+  const { data: cardsData } = useFlashcards(deckId)
+  const cards = useMemo(() => {
+    if (!cardsData) return []
+    return cardsData
+  }, [cardsData])
   const deleteDeck = useDeleteDeck()
   const deleteCard = useDeleteFlashcard()
 
@@ -85,7 +91,7 @@ function DeckDetailPage() {
           </div>
 
           <div className="space-y-2">
-            {cards?.map((card) => (
+            {cards?.map((card: Flashcard) => (
               <Card key={card.id}>
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between">

@@ -10,7 +10,6 @@ import {
   Home,
   Loader2,
   Settings,
-  TreeDeciduous,
   FlaskConical
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -22,40 +21,66 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
+import { useTranslation } from 'react-i18next'
 import { isAuthenticated } from '@/lib/auth'
 
-// Navigation items
-const navItems = [
-  { to: '/', label: '首页', icon: Home },
-  { 
-    to: '/learning', 
-    label: '学习', 
-    icon: BookOpen,
-    children: [
-      { to: '/learning/vocab', label: '词汇', icon: TreeDeciduous },
-      { to: '/learning/grammar', label: '语法', icon: FlaskConical },
-      { to: '/learning/idiom', label: '惯用语', icon: BookOpen },
-      { to: '/learning/text', label: '课文', icon: BookOpen },
-    ]
-  },
-  { to: '/exams', label: '考试', icon: ClipboardList },
-  { to: '/periodic', label: '周期考试', icon: GraduationCap },
-  { to: '/stats', label: '统计', icon: BarChart3 },
-]
+// Create auth context to share auth state
+interface AuthContextType {
+  isAuth: boolean | null
+  refreshAuth: () => void
+}
 
-function TopNavigation() {
+const AuthContext = createContext<AuthContextType>({ isAuth: null, refreshAuth: () => {} })
+
+
+function useNavItems() {
+  const { t } = useTranslation()
+  return [
+    { to: '/', label: t('nav.home'), icon: Home },
+    { 
+      to: '/learning/content', 
+      label: t('nav.learning'), 
+      icon: BookOpen,
+      children: [
+        { to: '/learning/content', label: t('nav.content'), icon: BookOpen },
+        { to: '/learning/courses', label: t('nav.courses'), icon: GraduationCap },
+        { to: '/learning/subjects', label: t('nav.subjects'), icon: FlaskConical },
+      ]
+    },
+    { to: '/exams', label: t('nav.exams'), icon: ClipboardList },
+    { to: '/periodic', label: t('nav.periodic'), icon: GraduationCap },
+    { to: '/stats', label: t('nav.stats'), icon: BarChart3 },
+  ]
+}
+
+function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t } = useTranslation()
+  const navItems = useNavItems()
 
-  if (!isAuthenticated()) {
+  if (isAuth === null) {
+    // Still loading auth state
     return (
       <div className="p-4 flex items-center justify-between border-b bg-card">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg">
           <GraduationCap className="h-6 w-6" />
-          学习考试
+          {t('login.title')}
+        </Link>
+        <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+      </div>
+    )
+  }
+
+  if (!isAuth) {
+    return (
+      <div className="p-4 flex items-center justify-between border-b bg-card">
+        <Link to="/" className="flex items-center gap-2 font-bold text-lg">
+          <GraduationCap className="h-6 w-6" />
+          {t('login.title')}
         </Link>
         <Link to="/login">
-          <Button variant="default" size="sm">登录</Button>
+          <Button variant="default" size="sm">{t('common.login')}</Button>
         </Link>
       </div>
     )
@@ -68,7 +93,7 @@ function TopNavigation() {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 font-bold text-lg mr-6">
             <GraduationCap className="h-6 w-6" />
-            学习考试
+            {t('login.title')}
           </Link>
           {navItems.map((item) => (
             <Link
@@ -102,7 +127,7 @@ function TopNavigation() {
               <div className="p-4 border-b">
                 <Link to="/" className="flex items-center gap-2 font-bold text-lg">
                   <GraduationCap className="h-6 w-6" />
-                  学习考试
+                  {t('login.title')}
                 </Link>
               </div>
               
@@ -132,7 +157,7 @@ function TopNavigation() {
                   className="flex items-center gap-3 px-3 py-3 rounded-md text-sm font-medium text-red-600 w-full transition-colors hover:bg-red-50"
                 >
                   <LogOut className="size-5" />
-                  退出登录
+                  {t('common.logout')}
                 </button>
               </div>
             </div>
@@ -141,7 +166,7 @@ function TopNavigation() {
 
         <Link to="/" className="font-bold text-lg flex items-center gap-2">
           <GraduationCap className="h-5 w-5" />
-          学习考试
+          {t('login.title')}
         </Link>
 
         <UserMenu />
@@ -152,6 +177,7 @@ function TopNavigation() {
 
 function UserMenu() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -167,14 +193,14 @@ function UserMenu() {
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuItem onClick={() => navigate({ to: '/settings' })}>
           <Settings className="mr-2 size-4" />
-          设置
+          {t('nav.settings')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => {
           localStorage.clear()
           window.location.href = '/login'
         }} className="text-red-600">
           <LogOut className="mr-2 size-4" />
-          退出登录
+          {t('common.logout')}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -188,21 +214,27 @@ function RootComponent() {
   const navigate = useNavigate()
   const currentPath = routerState.location.pathname
 
-  useEffect(() => {
-    setIsClient(true)
+  const checkAuth = () => {
     const auth = isAuthenticated()
     setIsAuth(auth)
-  }, [currentPath])
+    return auth
+  }
+
+  useEffect(() => {
+    setIsClient(true)
+    checkAuth()
+  }, [])
 
   useEffect(() => {
     if (!isClient || isAuth === null) return
     
+    // Only redirect if definitely not authenticated
     if (!isAuth && currentPath !== '/login') {
       navigate({ to: '/login' })
     }
   }, [isAuth, isClient, currentPath, navigate])
 
-  if (!isClient || isAuth === null) {
+  if (!isClient) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -214,22 +246,15 @@ function RootComponent() {
     return <Outlet />
   }
 
-  if (!isAuth) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
-  }
-
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <TopNavigation />
-      
-      <main className="flex-1 p-4 md:p-6">
-        <Outlet />
-      </main>
-    </div>
+    <AuthContext.Provider value={{ isAuth, refreshAuth: checkAuth }}>
+      <div className="min-h-screen flex flex-col bg-background">
+        <TopNavigation isAuth={isAuth} />
+        <main className="flex-1 p-4 md:p-6">
+          <Outlet />
+        </main>
+      </div>
+    </AuthContext.Provider>
   )
 }
 

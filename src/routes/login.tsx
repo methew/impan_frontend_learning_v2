@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { GraduationCap, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -12,7 +13,7 @@ export const Route = createFileRoute('/login')({
 })
 
 function LoginPage() {
-
+  const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -21,7 +22,7 @@ function LoginPage() {
     e.preventDefault()
     
     if (!email || !password) {
-      toast.error('请输入邮箱和密码')
+      toast.error(t('messages.error'))
       return
     }
     
@@ -42,12 +43,12 @@ function LoginPage() {
         username: email.split('@')[0] 
       }))
       
-      toast.success('登录成功')
+      toast.success(t('login.success'))
       
       // Force page reload to trigger auth state update
       window.location.href = '/'
     } catch (error) {
-      toast.error('登录失败，请检查邮箱和密码')
+      toast.error(t('login.error'))
     } finally {
       setIsLoading(false)
     }
@@ -62,26 +63,26 @@ function LoginPage() {
               <GraduationCap className="h-8 w-8 text-primary-foreground" />
             </div>
           </div>
-          <CardTitle className="text-2xl">学习考试系统</CardTitle>
+          <CardTitle className="text-2xl">{t('login.title')}</CardTitle>
           <CardDescription>
-            登录以继续学习
+            {t('login.subtitle')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">邮箱</Label>
+              <Label htmlFor="email">{t('common.email')}</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="your@email.com"
+                placeholder={t('login.emailPlaceholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">密码</Label>
+              <Label htmlFor="password">{t('common.password')}</Label>
               <Input
                 id="password"
                 type="password"
@@ -95,17 +96,13 @@ function LoginPage() {
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  登录中...
+                  {t('common.loading')}
                 </>
               ) : (
-                '登录'
+                t('login.submit')
               )}
             </Button>
           </form>
-          
-          <div className="mt-4 text-center text-sm text-muted-foreground">
-            <p>演示账号: demo@example.com / password</p>
-          </div>
         </CardContent>
       </Card>
     </div>

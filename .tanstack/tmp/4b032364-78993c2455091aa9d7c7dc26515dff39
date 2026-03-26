@@ -27,12 +27,9 @@ import { Route as LearningCoursesIndexRouteImport } from './routes/learning/cour
 import { Route as LearningContentIndexRouteImport } from './routes/learning/content/index'
 import { Route as LearningWritingPracticeRouteImport } from './routes/learning/writing/practice'
 import { Route as LearningFlashcardsDeckIdRouteImport } from './routes/learning/flashcards/$deckId'
-import { Route as LearningCoursesIdRouteImport } from './routes/learning/courses/$id'
-import { Route as LearningContentNewRouteImport } from './routes/learning/content/new'
 import { Route as ExamsSessionExamIdRouteImport } from './routes/exams/session.$examId'
 import { Route as ExamsResultsAttemptIdRouteImport } from './routes/exams/results/$attemptId'
 import { Route as LearningFlashcardsStudyDeckIdRouteImport } from './routes/learning/flashcards/study.$deckId'
-import { Route as LearningCoursesIdEditRouteImport } from './routes/learning/courses/$id.edit'
 import { Route as LearningContentTypeIdRouteImport } from './routes/learning/content/$type.$id'
 
 const StatsRoute = StatsRouteImport.update({
@@ -126,16 +123,6 @@ const LearningFlashcardsDeckIdRoute =
     path: '/flashcards/$deckId',
     getParentRoute: () => LearningRoute,
   } as any)
-const LearningCoursesIdRoute = LearningCoursesIdRouteImport.update({
-  id: '/courses/$id',
-  path: '/courses/$id',
-  getParentRoute: () => LearningRoute,
-} as any)
-const LearningContentNewRoute = LearningContentNewRouteImport.update({
-  id: '/content/new',
-  path: '/content/new',
-  getParentRoute: () => LearningRoute,
-} as any)
 const ExamsSessionExamIdRoute = ExamsSessionExamIdRouteImport.update({
   id: '/session/$examId',
   path: '/session/$examId',
@@ -152,11 +139,6 @@ const LearningFlashcardsStudyDeckIdRoute =
     path: '/flashcards/study/$deckId',
     getParentRoute: () => LearningRoute,
   } as any)
-const LearningCoursesIdEditRoute = LearningCoursesIdEditRouteImport.update({
-  id: '/edit',
-  path: '/edit',
-  getParentRoute: () => LearningCoursesIdRoute,
-} as any)
 const LearningContentTypeIdRoute = LearningContentTypeIdRouteImport.update({
   id: '/content/$type/$id',
   path: '/content/$type/$id',
@@ -176,8 +158,6 @@ export interface FileRoutesByFullPath {
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
-  '/learning/content/new': typeof LearningContentNewRoute
-  '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
   '/learning/content/': typeof LearningContentIndexRoute
@@ -187,7 +167,6 @@ export interface FileRoutesByFullPath {
   '/learning/subjects/': typeof LearningSubjectsIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
-  '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
 }
 export interface FileRoutesByTo {
@@ -201,8 +180,6 @@ export interface FileRoutesByTo {
   '/learning': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
-  '/learning/content/new': typeof LearningContentNewRoute
-  '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
   '/learning/content': typeof LearningContentIndexRoute
@@ -212,7 +189,6 @@ export interface FileRoutesByTo {
   '/learning/subjects': typeof LearningSubjectsIndexRoute
   '/learning/writing': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
-  '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
 }
 export interface FileRoutesById {
@@ -229,8 +205,6 @@ export interface FileRoutesById {
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
-  '/learning/content/new': typeof LearningContentNewRoute
-  '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
   '/learning/content/': typeof LearningContentIndexRoute
@@ -240,7 +214,6 @@ export interface FileRoutesById {
   '/learning/subjects/': typeof LearningSubjectsIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
-  '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
 }
 export interface FileRouteTypes {
@@ -258,8 +231,6 @@ export interface FileRouteTypes {
     | '/learning/'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
-    | '/learning/content/new'
-    | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
     | '/learning/content/'
@@ -269,7 +240,6 @@ export interface FileRouteTypes {
     | '/learning/subjects/'
     | '/learning/writing/'
     | '/learning/content/$type/$id'
-    | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -283,8 +253,6 @@ export interface FileRouteTypes {
     | '/learning'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
-    | '/learning/content/new'
-    | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
     | '/learning/content'
@@ -294,7 +262,6 @@ export interface FileRouteTypes {
     | '/learning/subjects'
     | '/learning/writing'
     | '/learning/content/$type/$id'
-    | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
   id:
     | '__root__'
@@ -310,8 +277,6 @@ export interface FileRouteTypes {
     | '/learning/'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
-    | '/learning/content/new'
-    | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
     | '/learning/content/'
@@ -321,7 +286,6 @@ export interface FileRouteTypes {
     | '/learning/subjects/'
     | '/learning/writing/'
     | '/learning/content/$type/$id'
-    | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
   fileRoutesById: FileRoutesById
 }
@@ -463,20 +427,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningFlashcardsDeckIdRouteImport
       parentRoute: typeof LearningRoute
     }
-    '/learning/courses/$id': {
-      id: '/learning/courses/$id'
-      path: '/courses/$id'
-      fullPath: '/learning/courses/$id'
-      preLoaderRoute: typeof LearningCoursesIdRouteImport
-      parentRoute: typeof LearningRoute
-    }
-    '/learning/content/new': {
-      id: '/learning/content/new'
-      path: '/content/new'
-      fullPath: '/learning/content/new'
-      preLoaderRoute: typeof LearningContentNewRouteImport
-      parentRoute: typeof LearningRoute
-    }
     '/exams/session/$examId': {
       id: '/exams/session/$examId'
       path: '/session/$examId'
@@ -497,13 +447,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/learning/flashcards/study/$deckId'
       preLoaderRoute: typeof LearningFlashcardsStudyDeckIdRouteImport
       parentRoute: typeof LearningRoute
-    }
-    '/learning/courses/$id/edit': {
-      id: '/learning/courses/$id/edit'
-      path: '/edit'
-      fullPath: '/learning/courses/$id/edit'
-      preLoaderRoute: typeof LearningCoursesIdEditRouteImport
-      parentRoute: typeof LearningCoursesIdRoute
     }
     '/learning/content/$type/$id': {
       id: '/learning/content/$type/$id'
@@ -531,21 +474,8 @@ const ExamsRouteChildren: ExamsRouteChildren = {
 
 const ExamsRouteWithChildren = ExamsRoute._addFileChildren(ExamsRouteChildren)
 
-interface LearningCoursesIdRouteChildren {
-  LearningCoursesIdEditRoute: typeof LearningCoursesIdEditRoute
-}
-
-const LearningCoursesIdRouteChildren: LearningCoursesIdRouteChildren = {
-  LearningCoursesIdEditRoute: LearningCoursesIdEditRoute,
-}
-
-const LearningCoursesIdRouteWithChildren =
-  LearningCoursesIdRoute._addFileChildren(LearningCoursesIdRouteChildren)
-
 interface LearningRouteChildren {
   LearningIndexRoute: typeof LearningIndexRoute
-  LearningContentNewRoute: typeof LearningContentNewRoute
-  LearningCoursesIdRoute: typeof LearningCoursesIdRouteWithChildren
   LearningFlashcardsDeckIdRoute: typeof LearningFlashcardsDeckIdRoute
   LearningWritingPracticeRoute: typeof LearningWritingPracticeRoute
   LearningContentIndexRoute: typeof LearningContentIndexRoute
@@ -560,8 +490,6 @@ interface LearningRouteChildren {
 
 const LearningRouteChildren: LearningRouteChildren = {
   LearningIndexRoute: LearningIndexRoute,
-  LearningContentNewRoute: LearningContentNewRoute,
-  LearningCoursesIdRoute: LearningCoursesIdRouteWithChildren,
   LearningFlashcardsDeckIdRoute: LearningFlashcardsDeckIdRoute,
   LearningWritingPracticeRoute: LearningWritingPracticeRoute,
   LearningContentIndexRoute: LearningContentIndexRoute,

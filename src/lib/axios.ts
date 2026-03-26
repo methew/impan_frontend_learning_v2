@@ -31,24 +31,26 @@ function onTokenRefreshed(newToken: string | null) {
 // Request interceptor
 apiClient.interceptors.request.use(
   async (config) => {
+    const token = getAccessToken()
+    console.log('[API] Request to:', config.url, 'Token:', token ? 'present' : 'missing')
+    
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
+    
     // Check if token is about to expire and refresh proactively
-    if (isTokenExpired()) {
+    if (isTokenExpired() && token) {
       const refreshToken = getRefreshToken()
       if (refreshToken) {
         try {
           const response = await refreshTokenApi(refreshToken)
           config.headers.Authorization = `Bearer ${response.access}`
-          return config
         } catch {
           // Continue with current token
         }
       }
     }
     
-    const token = getAccessToken()
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`
-    }
     return config
   },
   (error) => Promise.reject(error)

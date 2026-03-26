@@ -1,318 +1,245 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { useState, useEffect } from 'react'
+import { createFileRoute, Link, Outlet, useRouterState } from '@tanstack/react-router'
 import { 
   TreeDeciduous, 
-  FlaskConical,
   BookOpen,
-  Search,
-  ChevronDown,
-  ChevronUp,
-  Plus
+  Layers,
+  PenTool,
+  GraduationCap,
+  BarChart3,
+  ChevronRight,
+  Library,
+  FlaskConical,
+  Upload,
+  Menu,
+  X
 } from 'lucide-react'
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-import { toast } from 'sonner'
-import * as api from '@/api/learning'
-import { useGenerateFlashcardsFromNodes } from '@/hooks/useFlashcards'
-import type { BaseNode, ExampleSentence } from '@/types'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/learning')({
-  component: LearningPage,
+  component: LearningLayout,
 })
 
-const typeConfig = {
-  vocab: { 
-    title: '词汇学习', 
-    icon: TreeDeciduous, 
-    color: 'bg-emerald-500',
-    api: api.getVocabNodes
-  },
-  grammar: { 
-    title: '语法学习', 
-    icon: FlaskConical, 
-    color: 'bg-cyan-500',
-    api: api.getGramNodes
-  },
-  idiom: { 
-    title: '惯用语学习', 
-    icon: BookOpen, 
-    color: 'bg-indigo-500',
-    api: api.getIdiomNodes
-  },
-  text: { 
-    title: '课文学习', 
-    icon: BookOpen, 
-    color: 'bg-rose-500',
-    api: api.getTextNodes
-  },
-}
+function LearningLayout() {
+  const { t } = useTranslation()
+  const router = useRouterState()
+  const currentPath = router.location.pathname
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-function LearningPage() {
-  const [activeType] = useState<keyof typeof typeConfig>('vocab')
-  const config = typeConfig[activeType]
-  const Icon = config.icon
-  
-  const [nodes, setNodes] = useState<BaseNode[]>([])
-  const [selectedNode, setSelectedNode] = useState<BaseNode | null>(null)
-  const [examples, setExamples] = useState<ExampleSentence[]>([])
-  const [searchQuery, setSearchQuery] = useState('')
-  const [isLoading, setIsLoading] = useState(true)
-  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set())
-  
-  useEffect(() => {
-    loadNodes()
-  }, [activeType])
-  
-  useEffect(() => {
-    if (selectedNode) {
-      loadExamples(selectedNode.id)
+  const navItems = [
+    {
+      label: t('nav.content'),
+      href: '/learning/content',
+      icon: TreeDeciduous,
+      color: 'text-emerald-500',
+      description: `${t('learning.vocabulary')}、${t('learning.grammar')}、${t('learning.idioms')}、${t('learning.lessons')}`,
+    },
+    {
+      label: t('learning.courseManagement'),
+      href: '/learning/courses',
+      icon: Library,
+      color: 'text-blue-500',
+      description: t('learning.courseDescription'),
+    },
+    {
+      label: t('learning.subjectManagement'),
+      href: '/learning/subjects',
+      icon: FlaskConical,
+      color: 'text-purple-500',
+      description: t('learning.subjectDescription'),
+    },
+    {
+      label: t('learning.flashcards'),
+      href: '/learning/flashcards',
+      icon: Layers,
+      color: 'text-indigo-500',
+      description: t('learning.flashcardsDescription'),
+    },
+    {
+      label: t('learning.writing'),
+      href: '/learning/writing',
+      icon: PenTool,
+      color: 'text-green-500',
+      description: t('learning.writingDescription'),
+    },
+    {
+      label: t('learning.batchImport'),
+      href: '/learning/import',
+      icon: Upload,
+      color: 'text-orange-500',
+      description: t('learning.importDescription'),
+    },
+  ]
+
+  const externalLinks = [
+    {
+      label: t('learning.mockExam'),
+      href: '/exams',
+      icon: GraduationCap,
+      color: 'text-orange-500',
+    },
+    {
+      label: t('learning.statistics'),
+      href: '/stats',
+      icon: BarChart3,
+      color: 'text-cyan-500',
+    },
+  ]
+
+  const isActive = (href: string) => {
+    if (href === '/learning') {
+      return currentPath === '/learning'
     }
-  }, [selectedNode])
-  
-  const loadNodes = async () => {
-    setIsLoading(true)
-    try {
-      const data = await config.api({ ordering: 'sort_order' })
-      setNodes(data)
-      if (data.length > 0) {
-        setSelectedNode(data[0])
-      }
-    } catch (error) {
-      toast.error('加载内容失败')
-    } finally {
-      setIsLoading(false)
-    }
+    return currentPath.startsWith(href)
   }
-  
-  const loadExamples = async (nodeId: string) => {
-    try {
-      let data: ExampleSentence[] = []
-      if (activeType === 'vocab') {
-        data = await api.getVocabNodeExamples(nodeId)
-      } else if (activeType === 'grammar') {
-        data = await api.getGramNodeExamples(nodeId)
-      } else if (activeType === 'idiom') {
-        data = await api.getIdiomNodeExamples(nodeId)
-      }
-      setExamples(data)
-    } catch (error) {
-      console.log('Failed to load examples')
-    }
-  }
-  
-  const toggleNode = (nodeId: string) => {
-    setExpandedNodes(prev => {
-      const next = new Set(prev)
-      if (next.has(nodeId)) {
-        next.delete(nodeId)
-      } else {
-        next.add(nodeId)
-      }
-      return next
-    })
-  }
-  
-  const filteredNodes = nodes.filter(node => 
-    searchQuery === '' || 
-    node.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    node.content?.toLowerCase().includes(searchQuery.toLowerCase())
-  )
-  
-  // Group nodes by parent for tree view
-  const rootNodes = filteredNodes.filter(n => !n.parent)
-  const getChildNodes = (parentId: string) => filteredNodes.filter(n => n.parent === parentId)
-  
-  const renderNode = (node: BaseNode, level: number = 0) => {
-    const children = getChildNodes(node.id)
-    const hasChildren = children.length > 0
-    const isExpanded = expandedNodes.has(node.id)
-    const isSelected = selectedNode?.id === node.id
-    
-    return (
-      <div key={node.id}>
-        <div
-          className={cn(
-            "flex items-center gap-2 p-2 rounded-lg cursor-pointer transition-colors",
-            isSelected ? "bg-primary text-primary-foreground" : "hover:bg-accent",
-            level > 0 && "ml-4"
-          )}
-          style={{ paddingLeft: `${level * 16 + 8}px` }}
-          onClick={() => setSelectedNode(node)}
-        >
-          {hasChildren && (
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                toggleNode(node.id)
-              }}
-              className="p-1 rounded hover:bg-accent-foreground/10"
+
+  return (
+    <div className="flex h-[calc(100vh-64px)]">
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:flex w-64 flex-col border-r bg-card">
+        <div className="p-4 border-b">
+          <Link to="/learning" className="flex items-center gap-2">
+            <div className="p-2 bg-primary rounded-lg">
+              <BookOpen className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <div>
+              <h2 className="font-bold">{t('learning.center')}</h2>
+              <p className="text-xs text-muted-foreground">Learning Platform</p>
+            </div>
+          </Link>
+        </div>
+
+        <nav className="flex-1 overflow-auto p-3 space-y-1">
+          <p className="px-3 py-2 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+            {t('learning.coreFeatures')}
+          </p>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              className={cn(
+                "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors",
+                isActive(item.href)
+                  ? "bg-primary text-primary-foreground"
+                  : "hover:bg-accent"
+              )}
             >
-              {isExpanded ? (
-                <ChevronDown className="h-4 w-4" />
-              ) : (
-                <ChevronUp className="h-4 w-4" />
-              )}
-            </button>
-          )}
-          <span className="flex-1 truncate">{node.name}</span>
-          {node.node_type && (
-            <Badge variant={isSelected ? "secondary" : "outline"} className="text-xs">
-              {node.node_type}
-            </Badge>
-          )}
-        </div>
-        {hasChildren && isExpanded && (
-          <div>
-            {children.map(child => renderNode(child, level + 1))}
-          </div>
-        )}
-      </div>
-    )
-  }
-  
-  return (
-    <div className="h-[calc(100vh-140px)] flex gap-6">
-      {/* Sidebar */}
-      <div className="w-80 flex flex-col gap-4">
-        {/* Header */}
-        <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-lg ${config.color} text-white`}>
-            <Icon className="h-5 w-5" />
-          </div>
-          <h1 className="text-xl font-bold">{config.title}</h1>
-        </div>
-        
-        {/* Search */}
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="搜索..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10"
-          />
-        </div>
-        
-        {/* Node List */}
-        <Card className="flex-1 overflow-auto">
-          <CardContent className="p-2">
-            {isLoading ? (
-              <div className="flex justify-center py-8">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+              <item.icon className={cn("h-5 w-5", !isActive(item.href) && item.color)} />
+              <div className="flex-1 min-w-0">
+                <p className="font-medium text-sm">{item.label}</p>
+                <p className={cn(
+                  "text-xs truncate",
+                  isActive(item.href) ? "text-primary-foreground/80" : "text-muted-foreground"
+                )}>
+                  {item.description}
+                </p>
               </div>
-            ) : (
-              <div className="space-y-1">
-                {rootNodes.map(node => renderNode(node))}
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
-      
-      {/* Content */}
-      <div className="flex-1 overflow-auto">
-        {selectedNode ? (
-          <Card className="h-full">
-            <CardHeader>
-              <div className="flex items-center gap-2">
-                <Badge>{selectedNode.node_type}</Badge>
-                <AddToFlashcardButton node={selectedNode} />
-              </div>
-              <CardTitle className="text-2xl">{selectedNode.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {/* Content */}
-              {selectedNode.content && (
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">内容</h3>
-                  <p className="text-lg">{selectedNode.content}</p>
-                </div>
-              )}
-              
-              {/* Reading */}
-              {selectedNode.reading && (
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">读音</h3>
-                  <p className="text-lg text-muted-foreground">{selectedNode.reading}</p>
-                </div>
-              )}
-              
-              {/* Meaning */}
-              {selectedNode.meaning && (
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">含义</h3>
-                  <p className="text-lg">{selectedNode.meaning}</p>
-                </div>
-              )}
-              
-              {/* Examples */}
-              {examples.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-3">例句</h3>
-                  <div className="space-y-3">
-                    {examples.map((example, index) => (
-                      <Card key={index} className="bg-muted/50">
-                        <CardContent className="p-4 space-y-2">
-                          <p className="text-lg font-medium">{example.sentence}</p>
-                          {example.reading && (
-                            <p className="text-muted-foreground">{example.reading}</p>
-                          )}
-                          <p className="text-sm">{example.translation}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        ) : (
-          <Card className="h-full flex items-center justify-center">
-            <p className="text-muted-foreground">选择一个项目进行学习</p>
-          </Card>
-        )}
-      </div>
-    </div>
-  )
-}
+              {isActive(item.href) && <ChevronRight className="h-4 w-4" />}
+            </Link>
+          ))}
 
-// 添加到闪卡按钮
-function AddToFlashcardButton({ node }: { node: BaseNode }) {
-  const generateFlashcards = useGenerateFlashcardsFromNodes()
-  
-  const handleAdd = () => {
-    // 根据 activeType 确定节点类型
-    // 使用 'vocab' 作为默认值，后续可以根据学习内容动态调整
-    const nodeType = 'vocab'
-    
-    generateFlashcards.mutate(
-      { nodeType, nodeIds: [node.id] },
-      {
-        onSuccess: () => {
-          toast.success('已添加到闪卡', {
-            description: `${node.name} 已加入闪卡包`,
-          })
-        },
-        onError: () => {
-          toast.error('添加失败', {
-            description: '请稍后重试',
-          })
-        },
-      }
-    )
-  }
-  
-  return (
-    <button
-      onClick={handleAdd}
-      className="flex items-center gap-1 px-2 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
-      disabled={generateFlashcards.isPending}
-    >
-      <Plus className="h-3 w-3" />
-      {generateFlashcards.isPending ? '添加中...' : '加入闪卡'}
-    </button>
+          <p className="px-3 py-2 mt-6 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+            {t('common.others')}
+          </p>
+          {externalLinks.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              className={cn(
+                "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors",
+                isActive(item.href)
+                  ? "bg-primary text-primary-foreground"
+                  : "hover:bg-accent"
+              )}
+            >
+              <item.icon className={cn("h-5 w-5", !isActive(item.href) && item.color)} />
+              <span className="font-medium text-sm">{item.label}</span>
+            </Link>
+          ))}
+        </nav>
+
+        {/* {t('learning.footerInfo')} */}
+        <div className="p-4 border-t">
+          <div className="bg-muted rounded-lg p-3">
+            <p className="text-xs font-medium mb-1">{t('learning.progress')}</p>
+            <div className="flex items-center gap-2">
+              <div className="flex-1 h-2 bg-background rounded-full overflow-hidden">
+                <div className="h-full bg-primary w-[35%] rounded-full" />
+              </div>
+              <span className="text-xs text-muted-foreground">35%</span>
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">{t('learning.todayLearned', { minutes: 12 })}</p>
+          </div>
+        </div>
+      </aside>
+
+      {/* Mobile Header */}
+      <div className="lg:hidden fixed top-16 left-0 right-0 z-40 bg-card border-b">
+        <div className="flex items-center justify-between p-4">
+          <h2 className="font-bold">{t('learning.center')}</h2>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
+        </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <nav className="border-t p-3 space-y-1 max-h-[calc(100vh-140px)] overflow-auto">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors",
+                  isActive(item.href)
+                    ? "bg-primary text-primary-foreground"
+                    : "hover:bg-accent"
+                )}
+              >
+                <item.icon className={cn("h-5 w-5", !isActive(item.href) && item.color)} />
+                <div className="flex-1">
+                  <p className="font-medium">{item.label}</p>
+                  <p className={cn(
+                    "text-xs",
+                    isActive(item.href) ? "text-primary-foreground/80" : "text-muted-foreground"
+                  )}>
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+            <div className="border-t my-2" />
+            {externalLinks.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors",
+                  isActive(item.href)
+                    ? "bg-primary text-primary-foreground"
+                    : "hover:bg-accent"
+                )}
+              >
+                <item.icon className={cn("h-5 w-5", !isActive(item.href) && item.color)} />
+                <span className="font-medium">{item.label}</span>
+              </Link>
+            ))}
+          </nav>
+        )}
+      </div>
+
+      {/* Main Content */}
+      <main className="flex-1 overflow-auto p-6 lg:p-8 pt-20 lg:pt-8">
+        <Outlet />
+      </main>
+    </div>
   )
 }

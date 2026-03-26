@@ -40,7 +40,11 @@ type SortBy = 'updated' | 'created' | 'name' | 'due'
 type FilterType = 'all' | 'due' | 'new' | 'reviewing'
 
 function FlashcardsPage() {
-  const { data: decks, isLoading: decksLoading } = useDecks()
+  const { data: decksData, isLoading: decksLoading } = useDecks()
+  const decks = useMemo(() => {
+    if (!decksData) return []
+    return decksData
+  }, [decksData])
   const { data: stats } = useOverallStats()
   
   const [viewMode, setViewMode] = useState<ViewMode>('grid')
@@ -52,7 +56,7 @@ function FlashcardsPage() {
   const availableCategories = useMemo(() => {
     if (!decks) return []
     const cats = new Set<string>()
-    decks.forEach(d => d.tags?.forEach(t => cats.add(t)))
+    decks.forEach((d: Deck) => d.tags?.forEach((t: string) => cats.add(t)))
     return Array.from(cats)
   }, [decks])
 
@@ -66,7 +70,7 @@ function FlashcardsPage() {
       result = result.filter(d => 
         d.title.toLowerCase().includes(query) ||
         d.description?.toLowerCase().includes(query) ||
-        d.tags?.some(t => t.toLowerCase().includes(query))
+        d.tags?.some((t: string) => t.toLowerCase().includes(query))
       )
     }
     
@@ -80,7 +84,7 @@ function FlashcardsPage() {
     
     if (selectedCategories.length > 0) {
       result = result.filter(d => 
-        d.tags?.some(t => selectedCategories.includes(t))
+        d.tags?.some((t: string) => selectedCategories.includes(t))
       )
     }
     
