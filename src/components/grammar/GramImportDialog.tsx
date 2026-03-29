@@ -33,6 +33,7 @@ interface GramImportDialogProps {
 interface ImportItem {
   term: string
   conjugation?: string
+  conjugation_pattern?: string
   meaning?: string
   usage?: string
   level?: number

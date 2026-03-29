@@ -388,7 +388,7 @@ export function TextStructuredEditor({
       if (tree.isNew) {
         await api.createTextNode({
           content: tree.content,
-          node_type: tree.node_type,
+          node_type: tree.node_type as any,
           sort_order: tree.order,
           parent: null,
         })

@@ -89,6 +89,7 @@ export interface GramNode extends BaseNode {
   structure?: string
   usage_notes?: string
   conjugation_pattern?: string
+  difficulty_level?: number
   level?: string
 }
 
@@ -97,6 +98,9 @@ export interface IdiomNode extends BaseNode {
   literal_meaning?: string
   usage_context?: string
   equivalent_expression?: string
+  difficulty_level?: number
+  idiom_type?: string
+  english_equivalent?: string
 }
 
 // 课文节点
@@ -106,6 +110,9 @@ export interface TextLessonNode extends BaseNode {
   translation?: string
   audio_url?: string
   vocabulary_items?: string[]
+  difficulty_level?: number
+  estimated_duration?: number
+  section_type?: string
 }
 
 export interface ExampleSentence {
