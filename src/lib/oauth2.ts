@@ -11,7 +11,7 @@
  * 6. 将 token 设置到 Cookie
  */
 
-import { config } from './auth'
+import { config, getCsrfToken } from './auth'
 
 // ==================== PKCE 工具 ====================
 
@@ -225,6 +225,7 @@ export async function handleOAuth2Callback(
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-CSRFToken': getCsrfToken(),
       },
       body: JSON.stringify({
         access_token: tokenData.access_token,
