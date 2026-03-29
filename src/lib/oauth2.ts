@@ -12,6 +12,7 @@
  */
 
 import { config, getCsrfToken } from './auth'
+import { AUTH_CENTER_URL } from './config'
 
 // ==================== PKCE 工具 ====================
 
@@ -178,8 +179,7 @@ export async function handleOAuth2Callback(
   }
   
   // 用 code 换取 token
-  // 强制使用相对路径走 Vite 代理，避免 CORS 问题
-  const apiBasePath = '/api/v1/core/auth/center'
+  const apiBasePath = AUTH_CENTER_URL
   console.log('[OAuth2] Using apiBasePath:', apiBasePath)
   try {
     const tokenUrl = `${apiBasePath}/token/`
