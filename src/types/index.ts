@@ -19,12 +19,39 @@ export interface Language {
 // 学习树节点 (Learning Tree) - 原 learning_v2
 // ============================================================================
 
-export type NodeType = 'root' | 'level' | 'unit' | 'lesson' | 'content'
+// 节点类型 - 与后端 NodeTypeChoices 对应
+export type NodeType = 
+  // 核心层级
+  | 'term'           // 词条
+  | 'reading'        // 读音/发音
+  | 'sense'          // 义项/含义
+  | 'example'        // 例句
+  // 辅助节点
+  | 'translation'    // 翻译
+  | 'explanation'    // 解释说明
+  | 'gloss'          // 源语言释义
+  | 'note'           // 注释
+  | 'part_of_speech' // 词性
+  | 'form'           // 变形形式
+  | 'usage_rule'     // 用法说明
+  | 'cultural_note'  // 文化注释
+  | 'literal_meaning'// 字面意思
+  // 课文特有
+  | 'sentence'       // 句子
+  | 'structure'      // 语法结构
+  | 'section'        // 课程节
+  | 'usage_context'  // 使用场景
+  // 分类节点
+  | 'category'       // 分类
+  | 'unit'           // 单元
+  | 'group'          // 组
+  // 向后兼容
+  | 'root' | 'level' | 'lesson' | 'content'
 
 export interface BaseNode {
   id: string
   node_type: NodeType
-  parent?: string
+  parent?: string | number | null
   children?: BaseNode[]
   name: string
   content?: string
@@ -32,17 +59,28 @@ export interface BaseNode {
   meaning?: string
   sort_order: number
   is_active: boolean
+  created_by?: string | number | null  // 创建者ID
+  created_by_username?: string         // 创建者用户名
   created_at: string
   updated_at: string
 }
 
-// 词汇节点
+// 词汇节点 - 与后端数据结构对应
 export interface VocabNode extends BaseNode {
-  pronunciation?: string
-  pitch_accent?: string
-  word_type?: string
-  jlpt_level?: string
-  hsk_level?: string
+  // BaseLanguageNode 字段
+  content_json?: Record<string, any>  // 结构化内容
+  
+  // VocabNode 特有字段
+  normalized_content?: string         // 规范化内容
+  frequency_rank?: number             // 词频排名
+  difficulty_level?: number           // 难度等级 1-5(N1-N5), 6-11(HSK1-6)
+  
+  // 向后兼容的字段映射
+  name: string                        // 等同于 content
+  reading?: string                    // 可从 content_json 获取
+  word_type?: string                  // 可从 content_json 获取
+  jlpt_level?: string                 // 从 difficulty_level 转换
+  hsk_level?: string                  // 从 difficulty_level 转换
   sentences?: ExampleSentence[]
 }
 

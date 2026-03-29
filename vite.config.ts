@@ -20,8 +20,15 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      port: parseInt(env.PORT) || 3004,
+      port: parseInt(env.PORT) || 3003,
       open: env.BROWSER !== 'none',
+      proxy: {
+        // 代理 API 请求到后端
+        '/api': {
+          target: 'http://localhost:8000',
+          changeOrigin: true,
+        },
+      },
     },
   }
 })

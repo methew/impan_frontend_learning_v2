@@ -18,13 +18,19 @@ import { Route as ExamsRouteImport } from './routes/exams'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LearningIndexRouteImport } from './routes/learning/index'
 import { Route as ExamsIndexRouteImport } from './routes/exams/index'
+import { Route as OauthCallbackRouteImport } from './routes/oauth.callback'
 import { Route as ExamsExamIdRouteImport } from './routes/exams/$examId'
 import { Route as LearningWritingIndexRouteImport } from './routes/learning/writing/index'
+import { Route as LearningVocabIndexRouteImport } from './routes/learning/vocab/index'
+import { Route as LearningTextsIndexRouteImport } from './routes/learning/texts/index'
 import { Route as LearningSubjectsIndexRouteImport } from './routes/learning/subjects/index'
 import { Route as LearningImportIndexRouteImport } from './routes/learning/import/index'
+import { Route as LearningIdiomsIndexRouteImport } from './routes/learning/idioms/index'
+import { Route as LearningGrammarIndexRouteImport } from './routes/learning/grammar/index'
 import { Route as LearningFlashcardsIndexRouteImport } from './routes/learning/flashcards/index'
 import { Route as LearningCoursesIndexRouteImport } from './routes/learning/courses/index'
 import { Route as LearningContentIndexRouteImport } from './routes/learning/content/index'
+import { Route as LearningCategoriesIndexRouteImport } from './routes/learning/categories/index'
 import { Route as LearningWritingPracticeRouteImport } from './routes/learning/writing/practice'
 import { Route as LearningFlashcardsDeckIdRouteImport } from './routes/learning/flashcards/$deckId'
 import { Route as LearningCoursesIdRouteImport } from './routes/learning/courses/$id'
@@ -80,6 +86,11 @@ const ExamsIndexRoute = ExamsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ExamsRoute,
 } as any)
+const OauthCallbackRoute = OauthCallbackRouteImport.update({
+  id: '/oauth/callback',
+  path: '/oauth/callback',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExamsExamIdRoute = ExamsExamIdRouteImport.update({
   id: '/$examId',
   path: '/$examId',
@@ -90,6 +101,16 @@ const LearningWritingIndexRoute = LearningWritingIndexRouteImport.update({
   path: '/writing/',
   getParentRoute: () => LearningRoute,
 } as any)
+const LearningVocabIndexRoute = LearningVocabIndexRouteImport.update({
+  id: '/vocab/',
+  path: '/vocab/',
+  getParentRoute: () => LearningRoute,
+} as any)
+const LearningTextsIndexRoute = LearningTextsIndexRouteImport.update({
+  id: '/texts/',
+  path: '/texts/',
+  getParentRoute: () => LearningRoute,
+} as any)
 const LearningSubjectsIndexRoute = LearningSubjectsIndexRouteImport.update({
   id: '/subjects/',
   path: '/subjects/',
@@ -98,6 +119,16 @@ const LearningSubjectsIndexRoute = LearningSubjectsIndexRouteImport.update({
 const LearningImportIndexRoute = LearningImportIndexRouteImport.update({
   id: '/import/',
   path: '/import/',
+  getParentRoute: () => LearningRoute,
+} as any)
+const LearningIdiomsIndexRoute = LearningIdiomsIndexRouteImport.update({
+  id: '/idioms/',
+  path: '/idioms/',
+  getParentRoute: () => LearningRoute,
+} as any)
+const LearningGrammarIndexRoute = LearningGrammarIndexRouteImport.update({
+  id: '/grammar/',
+  path: '/grammar/',
   getParentRoute: () => LearningRoute,
 } as any)
 const LearningFlashcardsIndexRoute = LearningFlashcardsIndexRouteImport.update({
@@ -113,6 +144,11 @@ const LearningCoursesIndexRoute = LearningCoursesIndexRouteImport.update({
 const LearningContentIndexRoute = LearningContentIndexRouteImport.update({
   id: '/content/',
   path: '/content/',
+  getParentRoute: () => LearningRoute,
+} as any)
+const LearningCategoriesIndexRoute = LearningCategoriesIndexRouteImport.update({
+  id: '/categories/',
+  path: '/categories/',
   getParentRoute: () => LearningRoute,
 } as any)
 const LearningWritingPracticeRoute = LearningWritingPracticeRouteImport.update({
@@ -172,6 +208,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/oauth/callback': typeof OauthCallbackRoute
   '/exams/': typeof ExamsIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
@@ -180,11 +217,16 @@ export interface FileRoutesByFullPath {
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/learning/categories/': typeof LearningCategoriesIndexRoute
   '/learning/content/': typeof LearningContentIndexRoute
   '/learning/courses/': typeof LearningCoursesIndexRoute
   '/learning/flashcards/': typeof LearningFlashcardsIndexRoute
+  '/learning/grammar/': typeof LearningGrammarIndexRoute
+  '/learning/idioms/': typeof LearningIdiomsIndexRoute
   '/learning/import/': typeof LearningImportIndexRoute
   '/learning/subjects/': typeof LearningSubjectsIndexRoute
+  '/learning/texts/': typeof LearningTextsIndexRoute
+  '/learning/vocab/': typeof LearningVocabIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
@@ -197,6 +239,7 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/oauth/callback': typeof OauthCallbackRoute
   '/exams': typeof ExamsIndexRoute
   '/learning': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
@@ -205,11 +248,16 @@ export interface FileRoutesByTo {
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/learning/categories': typeof LearningCategoriesIndexRoute
   '/learning/content': typeof LearningContentIndexRoute
   '/learning/courses': typeof LearningCoursesIndexRoute
   '/learning/flashcards': typeof LearningFlashcardsIndexRoute
+  '/learning/grammar': typeof LearningGrammarIndexRoute
+  '/learning/idioms': typeof LearningIdiomsIndexRoute
   '/learning/import': typeof LearningImportIndexRoute
   '/learning/subjects': typeof LearningSubjectsIndexRoute
+  '/learning/texts': typeof LearningTextsIndexRoute
+  '/learning/vocab': typeof LearningVocabIndexRoute
   '/learning/writing': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
@@ -225,6 +273,7 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/oauth/callback': typeof OauthCallbackRoute
   '/exams/': typeof ExamsIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
@@ -233,11 +282,16 @@ export interface FileRoutesById {
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/learning/categories/': typeof LearningCategoriesIndexRoute
   '/learning/content/': typeof LearningContentIndexRoute
   '/learning/courses/': typeof LearningCoursesIndexRoute
   '/learning/flashcards/': typeof LearningFlashcardsIndexRoute
+  '/learning/grammar/': typeof LearningGrammarIndexRoute
+  '/learning/idioms/': typeof LearningIdiomsIndexRoute
   '/learning/import/': typeof LearningImportIndexRoute
   '/learning/subjects/': typeof LearningSubjectsIndexRoute
+  '/learning/texts/': typeof LearningTextsIndexRoute
+  '/learning/vocab/': typeof LearningVocabIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
@@ -254,6 +308,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/oauth/callback'
     | '/exams/'
     | '/learning/'
     | '/exams/results/$attemptId'
@@ -262,11 +317,16 @@ export interface FileRouteTypes {
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/learning/categories/'
     | '/learning/content/'
     | '/learning/courses/'
     | '/learning/flashcards/'
+    | '/learning/grammar/'
+    | '/learning/idioms/'
     | '/learning/import/'
     | '/learning/subjects/'
+    | '/learning/texts/'
+    | '/learning/vocab/'
     | '/learning/writing/'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
@@ -279,6 +339,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/oauth/callback'
     | '/exams'
     | '/learning'
     | '/exams/results/$attemptId'
@@ -287,11 +348,16 @@ export interface FileRouteTypes {
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/learning/categories'
     | '/learning/content'
     | '/learning/courses'
     | '/learning/flashcards'
+    | '/learning/grammar'
+    | '/learning/idioms'
     | '/learning/import'
     | '/learning/subjects'
+    | '/learning/texts'
+    | '/learning/vocab'
     | '/learning/writing'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
@@ -306,6 +372,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/oauth/callback'
     | '/exams/'
     | '/learning/'
     | '/exams/results/$attemptId'
@@ -314,11 +381,16 @@ export interface FileRouteTypes {
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/learning/categories/'
     | '/learning/content/'
     | '/learning/courses/'
     | '/learning/flashcards/'
+    | '/learning/grammar/'
+    | '/learning/idioms/'
     | '/learning/import/'
     | '/learning/subjects/'
+    | '/learning/texts/'
+    | '/learning/vocab/'
     | '/learning/writing/'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
@@ -333,6 +405,7 @@ export interface RootRouteChildren {
   PeriodicRoute: typeof PeriodicRoute
   SettingsRoute: typeof SettingsRoute
   StatsRoute: typeof StatsRoute
+  OauthCallbackRoute: typeof OauthCallbackRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -400,6 +473,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExamsIndexRouteImport
       parentRoute: typeof ExamsRoute
     }
+    '/oauth/callback': {
+      id: '/oauth/callback'
+      path: '/oauth/callback'
+      fullPath: '/oauth/callback'
+      preLoaderRoute: typeof OauthCallbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/exams/$examId': {
       id: '/exams/$examId'
       path: '/$examId'
@@ -414,6 +494,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningWritingIndexRouteImport
       parentRoute: typeof LearningRoute
     }
+    '/learning/vocab/': {
+      id: '/learning/vocab/'
+      path: '/vocab'
+      fullPath: '/learning/vocab/'
+      preLoaderRoute: typeof LearningVocabIndexRouteImport
+      parentRoute: typeof LearningRoute
+    }
+    '/learning/texts/': {
+      id: '/learning/texts/'
+      path: '/texts'
+      fullPath: '/learning/texts/'
+      preLoaderRoute: typeof LearningTextsIndexRouteImport
+      parentRoute: typeof LearningRoute
+    }
     '/learning/subjects/': {
       id: '/learning/subjects/'
       path: '/subjects'
@@ -426,6 +520,20 @@ declare module '@tanstack/react-router' {
       path: '/import'
       fullPath: '/learning/import/'
       preLoaderRoute: typeof LearningImportIndexRouteImport
+      parentRoute: typeof LearningRoute
+    }
+    '/learning/idioms/': {
+      id: '/learning/idioms/'
+      path: '/idioms'
+      fullPath: '/learning/idioms/'
+      preLoaderRoute: typeof LearningIdiomsIndexRouteImport
+      parentRoute: typeof LearningRoute
+    }
+    '/learning/grammar/': {
+      id: '/learning/grammar/'
+      path: '/grammar'
+      fullPath: '/learning/grammar/'
+      preLoaderRoute: typeof LearningGrammarIndexRouteImport
       parentRoute: typeof LearningRoute
     }
     '/learning/flashcards/': {
@@ -447,6 +555,13 @@ declare module '@tanstack/react-router' {
       path: '/content'
       fullPath: '/learning/content/'
       preLoaderRoute: typeof LearningContentIndexRouteImport
+      parentRoute: typeof LearningRoute
+    }
+    '/learning/categories/': {
+      id: '/learning/categories/'
+      path: '/categories'
+      fullPath: '/learning/categories/'
+      preLoaderRoute: typeof LearningCategoriesIndexRouteImport
       parentRoute: typeof LearningRoute
     }
     '/learning/writing/practice': {
@@ -548,11 +663,16 @@ interface LearningRouteChildren {
   LearningCoursesIdRoute: typeof LearningCoursesIdRouteWithChildren
   LearningFlashcardsDeckIdRoute: typeof LearningFlashcardsDeckIdRoute
   LearningWritingPracticeRoute: typeof LearningWritingPracticeRoute
+  LearningCategoriesIndexRoute: typeof LearningCategoriesIndexRoute
   LearningContentIndexRoute: typeof LearningContentIndexRoute
   LearningCoursesIndexRoute: typeof LearningCoursesIndexRoute
   LearningFlashcardsIndexRoute: typeof LearningFlashcardsIndexRoute
+  LearningGrammarIndexRoute: typeof LearningGrammarIndexRoute
+  LearningIdiomsIndexRoute: typeof LearningIdiomsIndexRoute
   LearningImportIndexRoute: typeof LearningImportIndexRoute
   LearningSubjectsIndexRoute: typeof LearningSubjectsIndexRoute
+  LearningTextsIndexRoute: typeof LearningTextsIndexRoute
+  LearningVocabIndexRoute: typeof LearningVocabIndexRoute
   LearningWritingIndexRoute: typeof LearningWritingIndexRoute
   LearningContentTypeIdRoute: typeof LearningContentTypeIdRoute
   LearningFlashcardsStudyDeckIdRoute: typeof LearningFlashcardsStudyDeckIdRoute
@@ -564,11 +684,16 @@ const LearningRouteChildren: LearningRouteChildren = {
   LearningCoursesIdRoute: LearningCoursesIdRouteWithChildren,
   LearningFlashcardsDeckIdRoute: LearningFlashcardsDeckIdRoute,
   LearningWritingPracticeRoute: LearningWritingPracticeRoute,
+  LearningCategoriesIndexRoute: LearningCategoriesIndexRoute,
   LearningContentIndexRoute: LearningContentIndexRoute,
   LearningCoursesIndexRoute: LearningCoursesIndexRoute,
   LearningFlashcardsIndexRoute: LearningFlashcardsIndexRoute,
+  LearningGrammarIndexRoute: LearningGrammarIndexRoute,
+  LearningIdiomsIndexRoute: LearningIdiomsIndexRoute,
   LearningImportIndexRoute: LearningImportIndexRoute,
   LearningSubjectsIndexRoute: LearningSubjectsIndexRoute,
+  LearningTextsIndexRoute: LearningTextsIndexRoute,
+  LearningVocabIndexRoute: LearningVocabIndexRoute,
   LearningWritingIndexRoute: LearningWritingIndexRoute,
   LearningContentTypeIdRoute: LearningContentTypeIdRoute,
   LearningFlashcardsStudyDeckIdRoute: LearningFlashcardsStudyDeckIdRoute,
@@ -586,6 +711,7 @@ const rootRouteChildren: RootRouteChildren = {
   PeriodicRoute: PeriodicRoute,
   SettingsRoute: SettingsRoute,
   StatsRoute: StatsRoute,
+  OauthCallbackRoute: OauthCallbackRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

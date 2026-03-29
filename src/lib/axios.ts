@@ -1,119 +1,98 @@
-import axios from 'axios'
-import { 
-  getAccessToken, 
-  getRefreshToken, 
-  clearTokens,
-  isTokenExpired,
-  refreshTokenApi 
-} from './auth'
+import axios, { AxiosError } from 'axios'
+import { refreshToken, redirectToLogin, getCsrfToken } from './auth'
 
+// 强制使用相对路径，确保走 Vite 代理
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
+  baseURL: '/api/v1',
+  withCredentials: true, // 携带 Cookie
   headers: {
     'Content-Type': 'application/json',
+    Accept: 'application/json',
   },
   timeout: 30000,
 })
 
-// Global flag to prevent concurrent token refresh
-let isRefreshing = false
-let refreshSubscribers: Array<(token: string | null) => void> = []
+// 请求拦截器：添加 CSRF Token（用于 POST/PUT/DELETE）
+apiClient.interceptors.request.use((config) => {
+  if (
+    ['post', 'put', 'patch', 'delete'].includes(
+      config.method?.toLowerCase() || ''
+    )
+  ) {
+    const csrfToken = getCsrfToken()
+    if (csrfToken) {
+      config.headers['X-CSRFToken'] = csrfToken
+    }
+  }
+  return config
+})
 
-function subscribeTokenRefresh(callback: (token: string | null) => void) {
+// 响应拦截器：处理 401 自动刷新
+let isRefreshing = false
+let refreshSubscribers: ((success: boolean) => void)[] = []
+
+function subscribeTokenRefresh(callback: (success: boolean) => void) {
   refreshSubscribers.push(callback)
 }
 
-function onTokenRefreshed(newToken: string | null) {
-  refreshSubscribers.forEach((callback) => callback(newToken))
+function onTokenRefreshed(success: boolean) {
+  refreshSubscribers.forEach((callback) => callback(success))
   refreshSubscribers = []
 }
 
-// Request interceptor
-apiClient.interceptors.request.use(
-  async (config) => {
-    const token = getAccessToken()
-    console.log('[API] Request to:', config.url, 'Token:', token ? 'present' : 'missing')
-    
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`
-    }
-    
-    // Check if token is about to expire and refresh proactively
-    if (isTokenExpired() && token) {
-      const refreshToken = getRefreshToken()
-      if (refreshToken) {
-        try {
-          const response = await refreshTokenApi(refreshToken)
-          config.headers.Authorization = `Bearer ${response.access}`
-        } catch {
-          // Continue with current token
-        }
-      }
-    }
-    
-    return config
-  },
-  (error) => Promise.reject(error)
-)
-
-// Flag to prevent multiple redirects
-let isRedirecting = false
-
-// Response interceptor
 apiClient.interceptors.response.use(
   (response) => response,
-  async (error) => {
-    const originalRequest = error.config
-    
-    if (error.response?.status !== 401 || originalRequest._retry) {
+  async (error: AxiosError) => {
+    const originalRequest = error.config as any & { _retry?: boolean }
+
+    // 401 未授权处理
+    if (
+      error.response?.status === 401 &&
+      originalRequest &&
+      !originalRequest._retry
+    ) {
+      // 登录相关接口 401 直接跳转登录页
+      if (originalRequest.url?.includes('/auth/')) {
+        redirectToLogin()
+        return Promise.reject(error)
+      }
+
+      if (isRefreshing) {
+        // 正在刷新，等待结果
+        return new Promise((resolve, reject) => {
+          subscribeTokenRefresh((success) => {
+            if (success) {
+              resolve(apiClient(originalRequest))
+            } else {
+              reject(error)
+            }
+          })
+        })
+      }
+
+      originalRequest._retry = true
+      isRefreshing = true
+
+      try {
+        const newToken = await refreshToken()
+        if (newToken) {
+          onTokenRefreshed(true)
+          isRefreshing = false
+          return apiClient(originalRequest)
+        }
+      } catch (refreshError) {
+        console.error('[Auth] Token refresh failed:', refreshError)
+      }
+
+      isRefreshing = false
+      onTokenRefreshed(false)
+
+      // 刷新失败，跳转登录
+      redirectToLogin()
       return Promise.reject(error)
     }
-    
-    originalRequest._retry = true
-    
-    if (isRefreshing) {
-      return new Promise((resolve, reject) => {
-        subscribeTokenRefresh((newToken: string | null) => {
-          if (newToken) {
-            originalRequest.headers.Authorization = `Bearer ${newToken}`
-            resolve(apiClient(originalRequest))
-          } else {
-            reject(new Error('Token refresh failed'))
-          }
-        })
-      })
-    }
-    
-    isRefreshing = true
-    
-    try {
-      const refreshToken = getRefreshToken()
-      if (!refreshToken) {
-        throw new Error('No refresh token')
-      }
-      
-      const response = await refreshTokenApi(refreshToken)
-      onTokenRefreshed(response.access)
-      
-      originalRequest.headers.Authorization = `Bearer ${response.access}`
-      return apiClient(originalRequest)
-    } catch (refreshError) {
-      onTokenRefreshed(null)
-      clearTokens()
-      
-      const currentPath = window.location.pathname
-      if (currentPath !== '/login' && !isRedirecting) {
-        isRedirecting = true
-        setTimeout(() => {
-          window.location.href = '/login'
-          setTimeout(() => { isRedirecting = false }, 500)
-        }, 100)
-      }
-      
-      return Promise.reject(refreshError)
-    } finally {
-      isRefreshing = false
-    }
+
+    return Promise.reject(error)
   }
 )
 

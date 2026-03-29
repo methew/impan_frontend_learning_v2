@@ -1,12 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { GraduationCap, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { GraduationCap } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { toast } from 'sonner'
+import { startOAuth2Login } from '@/lib/oauth2'
 
 export const Route = createFileRoute('/login')({
   component: LoginPage,
@@ -14,46 +11,13 @@ export const Route = createFileRoute('/login')({
 
 function LoginPage() {
   const { t } = useTranslation()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!email || !password) {
-      toast.error(t('messages.error'))
-      return
-    }
-    
-    setIsLoading(true)
-    
-    try {
-      // Mock login for development
-      const mockToken = 'mock_token_' + Date.now()
-      const mockRefreshToken = 'mock_refresh_' + Date.now()
-      
-      // Set tokens
-      localStorage.setItem('access_token', mockToken)
-      localStorage.setItem('refresh_token', mockRefreshToken)
-      localStorage.setItem('token_expires_at', (Date.now() + 30 * 60 * 1000).toString())
-      localStorage.setItem('user', JSON.stringify({ 
-        id: '1', 
-        email, 
-        username: email.split('@')[0] 
-      }))
-      
-      toast.success(t('login.success'))
-      
-      // Force page reload to trigger auth state update
-      window.location.href = '/'
-    } catch (error) {
-      toast.error(t('login.error'))
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  
+
+  useEffect(() => {
+    // 启动 OAuth 2.0 登录流程
+    // 注意：OAuth 回调在 /oauth/callback 路由处理
+    startOAuth2Login()
+  }, [])
+
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
@@ -63,48 +27,22 @@ function LoginPage() {
               <GraduationCap className="h-8 w-8 text-primary-foreground" />
             </div>
           </div>
-          <CardTitle className="text-2xl">{t('login.title')}</CardTitle>
+          <CardTitle className="text-2xl">
+            {t('login.redirecting') || 'Redirecting...'}
+          </CardTitle>
           <CardDescription>
-            {t('login.subtitle')}
+            {t('login.redirectingToLogin') || 'Redirecting to login page...'}
+          </CardDescription>
+          <CardDescription className="text-xs text-muted-foreground mt-2">
+            OAuth 2.0 + PKCE 安全登录
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">{t('common.email')}</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder={t('login.emailPlaceholder')}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={isLoading}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">{t('common.password')}</Label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                disabled={isLoading}
-              />
-            </div>
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  {t('common.loading')}
-                </>
-              ) : (
-                t('login.submit')
-              )}
-            </Button>
-          </form>
+        <CardContent className="flex justify-center pb-8">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
         </CardContent>
       </Card>
     </div>
   )
 }
+
+// 组件已内联在 Route 配置中，不需要单独导出

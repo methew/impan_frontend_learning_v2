@@ -200,7 +200,7 @@ function ContentPage() {
   }
   
   return (
-    <div className="h-[calc(100vh-180px)] flex gap-6">
+    <div className="h-full flex gap-6 overflow-hidden">
       {/* Sidebar */}
       <div className="w-80 flex flex-col gap-4">
         {/* Type Tabs */}
@@ -254,8 +254,8 @@ function ContentPage() {
         </div>
         
         {/* Node List */}
-        <Card className="flex-1 overflow-auto">
-          <CardContent className="p-2">
+        <Card className="flex-1 overflow-hidden flex flex-col">
+          <CardContent className="p-2 overflow-y-auto flex-1">
             {isLoading ? (
               <div className="flex justify-center py-8">
                 <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
@@ -270,7 +270,7 @@ function ContentPage() {
       </div>
       
       {/* Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-hidden">
         {selectedNode ? (
           <ContentDetail 
             node={selectedNode} 
@@ -332,8 +332,8 @@ function ContentDetail({ node, examples, contentType, config }: ContentDetailPro
   }
 
   return (
-    <Card className="h-full">
-      <CardHeader>
+    <Card className="h-full flex flex-col overflow-hidden">
+      <CardHeader className="shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Badge className={config.color}>{node.node_type}</Badge>
@@ -370,7 +370,7 @@ function ContentDetail({ node, examples, contentType, config }: ContentDetailPro
         <CardTitle className="text-3xl mt-4">{node.name}</CardTitle>
       </CardHeader>
       
-      <CardContent className="space-y-8">
+      <CardContent className="space-y-8 overflow-y-auto flex-1">
         {/* 主要内容 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* 左侧：基本信息 */}

@@ -288,8 +288,8 @@ function ContentDetailPage() {
                     {(node as VocabNode).hsk_level && (
                       <InfoItem label="HSK 等级" value={(node as VocabNode).hsk_level} />
                     )}
-                    {(node as VocabNode).pronunciation && (
-                      <InfoItem label="发音说明" value={(node as VocabNode).pronunciation} />
+                    {(node as VocabNode).content_json?.pronunciation && (
+                      <InfoItem label="发音说明" value={(node as VocabNode).content_json?.pronunciation} />
                     )}
                   </>
                 )}
