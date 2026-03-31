@@ -15,6 +15,7 @@ import { Route as PeriodicRouteImport } from './routes/periodic'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LearningRouteImport } from './routes/learning'
 import { Route as ExamsRouteImport } from './routes/exams'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LearningIndexRouteImport } from './routes/learning/index'
 import { Route as ExamsIndexRouteImport } from './routes/exams/index'
@@ -69,6 +70,11 @@ const LearningRoute = LearningRouteImport.update({
 const ExamsRoute = ExamsRouteImport.update({
   id: '/exams',
   path: '/exams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -201,6 +207,7 @@ const LearningContentTypeIdRoute = LearningContentTypeIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/exams': typeof ExamsRouteWithChildren
   '/learning': typeof LearningRouteWithChildren
   '/login': typeof LoginRoute
@@ -234,6 +241,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/login': typeof LoginRoute
   '/periodic': typeof PeriodicRoute
   '/settings': typeof SettingsRoute
@@ -266,6 +274,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/exams': typeof ExamsRouteWithChildren
   '/learning': typeof LearningRouteWithChildren
   '/login': typeof LoginRoute
@@ -301,6 +310,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/exams'
     | '/learning'
     | '/login'
@@ -334,6 +344,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/login'
     | '/periodic'
     | '/settings'
@@ -365,6 +376,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/exams'
     | '/learning'
     | '/login'
@@ -399,6 +411,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ExamsRoute: typeof ExamsRouteWithChildren
   LearningRoute: typeof LearningRouteWithChildren
   LoginRoute: typeof LoginRoute
@@ -450,6 +463,13 @@ declare module '@tanstack/react-router' {
       path: '/exams'
       fullPath: '/exams'
       preLoaderRoute: typeof ExamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -705,6 +725,7 @@ const LearningRouteWithChildren = LearningRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ExamsRoute: ExamsRouteWithChildren,
   LearningRoute: LearningRouteWithChildren,
   LoginRoute: LoginRoute,
