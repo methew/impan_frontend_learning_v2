@@ -90,7 +90,6 @@ function parseCSV(text: string): ImportItem[] {
           item.conjugation = value
           break
         case 'meaning':
-        case 'meaning':
         case '意思':
         case '含义':
           item.meaning = value
