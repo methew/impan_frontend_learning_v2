@@ -36,6 +36,7 @@ import {
 import { useState, useEffect, createContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import '@/i18n'
+import { APP_VERSION } from '@/version'
 import { checkAuth as checkAuthStatus, logout, startTokenRefreshTimer } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 
@@ -413,8 +414,11 @@ function RootComponent() {
       <AuthContext.Provider value={{ isAuth, refreshAuth: checkAuthStatus }}>
         <div className="min-h-screen flex flex-col bg-background">
           <TopNavigation isAuth={isAuth} />
-          <main className="flex-1 p-4 md:p-6 overflow-hidden">
+          <main className="flex-1 p-4 md:p-6 overflow-hidden relative">
             <Outlet />
+            <div className="fixed bottom-2 right-2 text-[10px] text-muted-foreground/60 pointer-events-none select-none z-50">
+              {APP_VERSION}
+            </div>
           </main>
         </div>
         <TanStackRouterDevtools />
