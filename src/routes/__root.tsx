@@ -38,7 +38,7 @@ import { useState, useEffect, createContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import '@/i18n'
 import { APP_VERSION } from '@/version'
-import { checkAuth as checkAuthStatus, logout, startTokenRefreshTimer, performTokenRefresh } from '@/lib/auth'
+import { checkAuth as checkAuthStatus, logout, startTokenRefreshTimer, performTokenRefresh, getCurrentUser, type UserInfo } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 
 // Create auth context to share auth state
@@ -198,24 +198,76 @@ function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
 function UserMenu() {
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const [user, setUser] = useState<UserInfo | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // 检查登录状态
+    const checkUser = async () => {
+      const userInfo = await getCurrentUser()
+      setUser(userInfo)
+      setLoading(false)
+      
+      // 未登录时跳转到登录页
+      if (!userInfo) {
+        navigate({ to: '/login' })
+      }
+    }
+    checkUser()
+  }, [navigate])
+
+  const handleLogout = () => {
+    if (window.confirm('确定要退出登录吗？')) {
+      logout()
+    }
+  }
+
+  // 加载中显示简化版本
+  if (loading) {
+    return (
+      <Button variant="ghost" size="sm" className="gap-2" disabled>
+        <Avatar className="h-8 w-8">
+          <AvatarFallback className="text-xs bg-primary text-primary-foreground">
+            U
+          </AvatarFallback>
+        </Avatar>
+      </Button>
+    )
+  }
+
+  // 未登录时跳转到登录页（在 useEffect 中处理）
+  if (!user) {
+    return null
+  }
+
+  // 获取用户名的首字母或前两个字符作为头像
+  const userInitial = user.username?.charAt(0).toUpperCase() || 
+                      user.email?.charAt(0).toUpperCase() || 'U'
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2">
           <Avatar className="h-8 w-8">
             <AvatarFallback className="text-xs bg-primary text-primary-foreground">
-              U
+              {userInitial}
             </AvatarFallback>
           </Avatar>
+          <span className="hidden sm:inline max-w-[100px] truncate">
+            {user.username || user.email}
+          </span>
           <ChevronDown className="size-3" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
+        <div className="px-2 py-1.5 text-sm font-medium text-muted-foreground border-b mb-1">
+          {user.username || user.email}
+        </div>
         <DropdownMenuItem onClick={() => navigate({ to: '/settings' })}>
           <Settings className="mr-2 size-4" />
           {t('nav.settings')}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => logout()} className="text-red-600">
+        <DropdownMenuItem onClick={handleLogout} className="text-red-600">
           <LogOut className="mr-2 size-4" />
           {t('common.logout')}
         </DropdownMenuItem>
