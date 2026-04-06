@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute, Link, Outlet, useRouterState, useNavigate } from '@tanstack/react-router'
+import { createRootRoute, Link, Outlet, useRouterState, useNavigate } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { Toaster } from 'sonner'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -507,28 +507,6 @@ function RootComponent() {
   )
 }
 
-// Root document component for SSR shell
-function RootDocument({ children }: { children: React.ReactNode }) {
-  // SSR 渲染：返回完整 HTML 文档
-  // 注意：客户端 hydration 时也会执行，但 React 会正确处理
-  return (
-    <html lang="zh-CN">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Learning - 学习</title>
-        <HeadContent />
-      </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
-        <Toaster position="top-right" richColors />
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  )
-}
-
 export const Route = createRootRoute({
   component: RootComponent,
-  shellComponent: RootDocument,
 })
