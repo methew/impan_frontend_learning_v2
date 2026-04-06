@@ -38,7 +38,7 @@ import { useState, useEffect, createContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import '@/i18n'
 import { APP_VERSION } from '@/version'
-import { checkAuth as checkAuthStatus, logout, startTokenRefreshTimer } from '@/lib/auth'
+import { checkAuth as checkAuthStatus, logout, startTokenRefreshTimer, performTokenRefresh } from '@/lib/auth'
 import { cn } from '@/lib/utils'
 
 // Create auth context to share auth state

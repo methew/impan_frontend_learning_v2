@@ -123,10 +123,16 @@ export async function logout(): Promise<void> {
   window.location.href = `${APP_URL}/login`
 }
 
+export interface RefreshTokenResponse {
+  access: string
+  refresh?: string  // 如果返回了新的 refresh token，说明原 refresh token 被轮换
+}
+
 /**
  * 刷新 Access Token
+ * @returns {Promise<RefreshTokenResponse | null>} 返回 token 数据，失败时返回 null
  */
-export async function refreshToken(): Promise<string | null> {
+export async function refreshToken(): Promise<RefreshTokenResponse | null> {
   try {
     const response = await fetch(`${API_BASE_URL}/core/auth/center/token/refresh/`, {
       method: 'POST',
@@ -134,12 +140,45 @@ export async function refreshToken(): Promise<string | null> {
     })
     if (response.ok) {
       const data = await response.json()
-      return data.access
+      return {
+        access: data.access,
+        refresh: data.refresh,  // 如果后端轮换 refresh token，会返回新的
+      }
     }
+    // 刷新失败，token 可能已过期
+    console.error('[Auth] Token refresh failed:', response.status)
     return null
-  } catch {
+  } catch (error) {
+    console.error('[Auth] Token refresh error:', error)
     return null
   }
+}
+
+/**
+ * 执行完整的 token 刷新流程
+ * - 如果刷新失败，自动退出登录
+ * - 如果 refresh token 被轮换（返回新的 refresh），跳转到首页
+ * @returns {Promise<boolean>} 是否刷新成功
+ */
+export async function performTokenRefresh(): Promise<boolean> {
+  const result = await refreshToken()
+  
+  if (!result) {
+    // 刷新失败，退出登录
+    console.error('[Auth] Token refresh failed, logging out...')
+    await logout()
+    return false
+  }
+  
+  // 如果返回了新的 refresh token，说明原 refresh token 被轮换
+  // 这种情况下跳转到首页，避免在敏感操作页面停留
+  if (result.refresh) {
+    console.log('[Auth] Refresh token rotated, redirecting to home...')
+    window.location.href = '/'
+    return true
+  }
+  
+  return true
 }
 
 /**
@@ -152,6 +191,7 @@ export function getCsrfToken(): string {
 
 /**
  * 启动定期 Token 刷新
+ * 使用 performTokenRefresh 确保刷新失败时自动退出登录
  */
 export function startTokenRefreshTimer(): () => void {
   const existingTimer = (window as any).__tokenRefreshTimer
@@ -159,12 +199,13 @@ export function startTokenRefreshTimer(): () => void {
     clearInterval(existingTimer)
   }
 
-  refreshToken()
+  // 立即执行一次刷新
+  performTokenRefresh()
 
   const timer = setInterval(async () => {
     const isAuth = await checkAuth()
     if (isAuth) {
-      await refreshToken()
+      await performTokenRefresh()
     }
   }, TOKEN_REFRESH_INTERVAL)
 
