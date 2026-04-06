@@ -1,0 +1,7722 @@
+texts:
+- node_type: TERM
+  id: lesson-026
+  content: 第26課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-026-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-026-pattern-01
+      content: 生け花の先生を紹介してもらえませんでした。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: の表示所属/修饰；を表示宾语；も表示也/同样；ません表示否定
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-pattern-02
+      content: あなたが行ったら旅行を楽しんでください。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-026-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-026-example-01
+      content: 渡辺さんにいつ大阪へ行くか聞いてみました。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-example-02
+      content: 大阪に住んでいます。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-example-03
+      content: どこへ行くか聞いてみました。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-example-04
+      content: 誰が来ますか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-example-05
+      content: 山田さんが来ます。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-example-06
+      content: どこへ行きますか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-026-example-07
+      content: カナダへ行きます。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-026-example-08
+      content: 日本語が少し分かるようになりました。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 日本
+      - 本
+    - node_type: SENTENCE
+      id: lesson-026-example-09
+      content: 会社の仕事を見学させていただきました。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - 会社
+      - 仕事
+      - 見ます
+  - node_type: SECTION
+    id: lesson-026-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: ごみはどこに出したらいいですか
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-01
+      content: ミラーさん、引っ越しの荷物は片付きましたか。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-02
+      content: はい、だいたい片付きました。あのう、ごみを捨てたいんですが、どこに出したらいいですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-03
+      content: 燃えるごみは月曜日と木曜日の朝出してください。ごみ置き場は駐車場の横です。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-04
+      content: ビンや缶はいつですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-05
+      content: 土曜日です。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-06
+      content: ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-07
+      content: わかりました。それから、お湯が出ないんですが。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      related_vocabularies:
+      - です
+      - それ
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-08
+      content: ガス会社に連絡したら、すぐ来てくれますよ。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～よ
+      related_vocabularies:
+      - 会社
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-09
+      content: すみませんが、電話番号を教えていただけませんか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies:
+      - 電話
+    - node_type: SENTENCE
+      id: lesson-026-dialogue-10
+      content: ええ、いいですよ。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～よ
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-027
+  content: 第27課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-027-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-027-pattern-01
+      content: 日本語が少し話せるようになりました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 日本
+      - 本
+    - node_type: SENTENCE
+      id: lesson-027-pattern-02
+      content: 山田さんに会えるようになりました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-pattern-03
+      content: 前はコンピューターが使えませんでした。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: ません表示否定
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-027-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-027-example-01
+      content: 日本語の新聞が読めるようになりましたか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 日本
+      - 本
+    - node_type: SENTENCE
+      id: lesson-027-example-02
+      content: 元、読めません。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-03
+      content: あの声が水の音が聞こえますか。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-04
+      content: 元元。春が来ました。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-05
+      content: 法隆寺に行けるようになりましたか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-06
+      content: 7年に行けるようになりました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-07
+      content: どこで会えますか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-example-08
+      content: 駅前で会えます。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-027-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 何でも作れるんですね
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-01
+      content: 明るくていい部屋ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-02
+      content: ええ、天気がいい日には海が見えるんです。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - です
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-03
+      content: このテーブルはおもしろいデザインですね。どこで買ったんですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      - ～ね
+      - ～は～です
+      - ～も
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-04
+      content: これはわたしが作ったんですよ。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～よ
+      related_vocabularies:
+      - です
+      - 私
+      - これ
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-05
+      content: えっ、ほんとうですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-06
+      content: ええ、趣味は自分で額を作ることなんです。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-07
+      content: へえ。では、あの本棚も作ったんですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-08
+      content: ええ。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-09
+      content: すごいですね。鈴木さん、何でも作れるんですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-10
+      content: わたしの夢はいつか自分で家を建てることなんです。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 私
+      - 家
+    - node_type: SENTENCE
+      id: lesson-027-dialogue-11
+      content: すばらしい夢ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-028
+  content: 第28課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-028-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-028-pattern-01
+      content: 音楽を聴きながら食事をします。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-pattern-02
+      content: 朝ごはんを食べながら新聞を読みます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-028-pattern-03
+      content: 地下鉄は速いです。でも、安いので、地下鉄で行きます。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: は表示主题/主语；の表示所属/修饰；も表示也/同样
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～で行きます
+      - ～も
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 行きます
+  - node_type: SECTION
+    id: lesson-028-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-028-example-01
+      content: 眠くなりながら運転をします。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-example-02
+      content: 音楽を聴きながら勉強をします。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-028-example-03
+      content: 彼は大学に行きました。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～は～です
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-028-example-04
+      content: でも、辞書を忘れました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - 辞書
+    - node_type: SENTENCE
+      id: lesson-028-example-05
+      content: この本は面白いです。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-028-example-06
+      content: でも、高いです。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-028-example-07
+      content: トム先生は熱心で、親切です。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-028-example-08
+      content: でも、先生は厳しいです。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～は～です
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-028-example-09
+      content: 友達が来ます。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-example-10
+      content: 食事に来ます。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-example-11
+      content: 富士大学に行きます。
+      content_json:
+        type: example_question
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-028-example-12
+      content: でも、寮に住みます。
+      content_json:
+        type: example_answer
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-028-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 出張が多いので、……
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-01
+      content: 何をしていますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-02
+      content: アメリカに出張の準備をしています。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-03
+      content: いつ行きますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-04
+      content: 来月です。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-05
+      content: 出張は多いですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-06
+      content: 元元。でも、友達と英語を勉強したり……。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-07
+      content: 元元。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-08
+      content: でも、上手になりません。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-09
+      content: 先生に英語を教えてもらっていますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-10
+      content: 元？ 先生？ いいえ。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-11
+      content: でも、あのう……。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-12
+      content: どうしましたか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-13
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 小川幸子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-028-dialogue-14
+      content: まだですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-029
+  content: 第29課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-029-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-029-pattern-01
+      content: 財布をなくしてしまいました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-pattern-02
+      content: 鍵を忘れてしまいました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-029-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-029-example-01
+      content: 何をなくしてしまいましたか。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-example-02
+      content: どこに鍵を忘れてしまいましたか。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-example-03
+      content: 誰が来てしまいましたか。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-example-04
+      content: お先に失礼してしまいます。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-example-05
+      content: 何を食べてしまいましたか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-029-example-06
+      content: どこに行ってしまいましたか。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-029-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 忘れ物をしてしまったんです
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-01
+      content: すみません、今の電車に忘れ物をしてしまったんですが。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-02
+      content: 何を忘れたんですか。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-03
+      content: 青いかばんです。このくらいの大きさで、外側に大きいポケットが付いています。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-04
+      content: どの辺に置きましたか。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-05
+      content: よく覚えていません。でも網棚の上に置きました。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-06
+      content: 中に何が入っていますか。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-07
+      content: えーと、確か本と傘が入っています。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 本
+      - 傘
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-08
+      content: じゃ調べますからちょっと待っていてください。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-09
+      content: ありましたよ。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～よ
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-10
+      content: ああ、よかった。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-11
+      content: 今新宿駅にありますがどうしますか。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-12
+      content: すぐ取りに行きます。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-13
+      content: じゃ新宿駅の事務所に行ってください。
+      content_json:
+        type: dialogue
+        speaker: 駅員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-029-dialogue-14
+      content: はい、どうもありがとうございました。
+      content_json:
+        type: dialogue
+        speaker: 客
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-030
+  content: 第30課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-030-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-030-pattern-01
+      content: 地震が起こるかもしれません。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: も表示也/同样；ません表示否定
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-pattern-02
+      content: 旅行のチケットを買っておきます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-030-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-030-example-01
+      content: 雨が降るかもしれませんか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-example-02
+      content: 元？ そうですか。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-030-example-03
+      content: テニスのボールを買っておきます。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-example-04
+      content: 誰が来るかもしれませんよ。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      - ～よ
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-example-05
+      content: 元、来ません。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-example-06
+      content: 何を食べておきますか。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      - ～ますか
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-030-example-07
+      content: 資料をコピーしておきます。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-030-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 非常袋
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-01
+      content: ここに何がありますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - ここ
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-02
+      content: 非常袋です。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-03
+      content: 非常袋？ 何ですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-04
+      content: 非常の時に使う物を入れた袋です。生活に必要な物を入れてあります。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-05
+      content: 水とお菓子が入っていますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-06
+      content: 元、あの中に入っています。
+      content_json:
+        type: dialogue
+        speaker: 管理人
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-030-dialogue-07
+      content: いつ備えておきますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-031
+  content: 第31課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-031-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-031-pattern-01
+      content: 疲れたので、早く寝ます。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: の表示所属/修饰
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 寝ます
+    - node_type: SENTENCE
+      id: lesson-031-pattern-02
+      content: 用事があるので、早く帰ります。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-031-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-031-example-01
+      content: 疲れたので、体はどうですか？ 大丈夫です。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-031-example-02
+      content: お正月に何をしますか。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-031-example-03
+      content: レポートはおわりましたか。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-031-example-04
+      content: 何を食べましたか。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-031-example-05
+      content: 夏休みに国へ帰りましたか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 国
+    - node_type: SENTENCE
+      id: lesson-031-example-06
+      content: はい、帰りました。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-031-example-07
+      content: コンサートに出ましたか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-031-example-08
+      content: はい、出ました。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-031-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-01
+      content: 来月単身赴任で東京へ行きます。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-02
+      content: 元？ 本当ですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-03
+      content: はい、本社に単身赴任です。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-04
+      content: 奥さんと息子さんは東京に残すんですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-05
+      content: 元元、息子が来年大学に入るので、東京に残すと言っています。妻も会社に残ると言っています。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      related_vocabularies:
+      - 会社
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-06
+      content: では、別々に住むんですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-07
+      content: はい、2ヶ月に一回帰ってきます。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-08
+      content: 大変ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-09
+      content: はい、でも、仕事ですから。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～から
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 仕事
+    - node_type: SENTENCE
+      id: lesson-031-dialogue-10
+      content: そうですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-032
+  content: 第32課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-032-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-032-pattern-01
+      content: 毎日働きすぎます。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-pattern-02
+      content: 大雪が降りました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-pattern-03
+      content: 風邪を引かないようにします。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-032-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-032-example-01
+      content: 何を食べすぎましたか。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-032-example-02
+      content: 10時には家に着くようにしますか。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies:
+      - 家
+    - node_type: SENTENCE
+      id: lesson-032-example-03
+      content: はい、着くようにします。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-example-04
+      content: 先生に会うようにします。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-example-05
+      content: はい、先生に会うようにします。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-example-06
+      content: 心配しないでください。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-example-07
+      content: 体の調子はどうですか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+  - node_type: SECTION
+    id: lesson-032-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 無理をしないで
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-01
+      content: 元気ですね。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-02
+      content: はい。でも、時々お腹が痛くなったりします。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-03
+      content: どうしてですか。仕事が忙しいですか。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 仕事
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-04
+      content: はい。残業が多いです。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-05
+      content: ストレスかもしれませんね。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～ね
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-06
+      content: 元元、そうです。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-07
+      content: 無理をしないでください。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-08
+      content: はい、仕事が終わったら休みます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 仕事
+    - node_type: SENTENCE
+      id: lesson-032-dialogue-09
+      content: そうですね。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-033
+  content: 第33課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-033-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-033-pattern-01
+      content: 窓を開けなさい。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-pattern-02
+      content: 勉強しなさい。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-033-pattern-03
+      content: 立入禁止、入ってはいけません。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: ません表示否定
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-pattern-04
+      content: ここに駐車してはいけません。
+      content_json:
+        type: pattern
+        pattern_number: 4
+        note: に表示时间/地点/方向；ません表示否定
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies:
+      - ここ
+  - node_type: SECTION
+    id: lesson-033-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-033-example-01
+      content: 机の上を片付けなさい。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-02
+      content: 机を片付けなさい。500円払いなさい。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-03
+      content: 時々水を飲みなさい。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 飲みます
+    - node_type: SENTENCE
+      id: lesson-033-example-04
+      content: このペンを使いなさい。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-05
+      content: 後で「ありがとう」と言いなさい。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-06
+      content: 漢字は何と書きますか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-07
+      content: 「大丈夫」と書きます。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-08
+      content: ここに入ってはいけません。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies:
+      - ここ
+    - node_type: SENTENCE
+      id: lesson-033-example-09
+      content: タバコを吸ってはいけません。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-10
+      content: 渡辺さんは何時に来ますか。
+      content_json:
+        type: example_question
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-example-11
+      content: 6時に来ます。
+      content_json:
+        type: example_answer
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-033-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-01
+      content: あの漢字は何と書きますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-02
+      content: 「駐車禁止」と書きます。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-03
+      content: どういう意味ですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-04
+      content: 駐車を止めてはいけないという意味です。これは正しいですか。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+      - これ
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-05
+      content: そうですか。罰金を払わなければなりませんか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-06
+      content: 元、はい、1,000円払わなければなりません。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-033-dialogue-07
+      content: そうですか。1,000円ですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-034
+  content: 第34課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-034-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-034-pattern-01
+      content: 先生の言うように、書きなさい。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: の表示所属/修饰；に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-pattern-02
+      content: ご飯を食べたあとで歯を磨きます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: を表示宾语；と表示和/一起
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-pattern-03
+      content: コーヒーに砂糖を入れないで飲みます。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 飲みます
+  - node_type: SECTION
+    id: lesson-034-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-034-example-01
+      content: これは新しいコンピューターです。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - です
+      - これ
+    - node_type: SENTENCE
+      id: lesson-034-example-02
+      content: マウスを動かすようにします。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-example-03
+      content: ここに立ってはいけません。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies:
+      - ここ
+    - node_type: SENTENCE
+      id: lesson-034-example-04
+      content: ここに入ってはいけません。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～は～です
+      related_vocabularies:
+      - ここ
+    - node_type: SENTENCE
+      id: lesson-034-example-05
+      content: はい、入りません。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-example-06
+      content: 結婚式の後で何をしますか。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-example-07
+      content: 何を食べた後で歯を磨きますか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      - ～ますか
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-example-08
+      content: このミルクを飲まないでください。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～を～ます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-example-09
+      content: 最近何を食べないでいますか。
+      content_json:
+        type: example_question
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      - ～ますか
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-example-10
+      content: 魚を食べないでいます。
+      content_json:
+        type: example_answer
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+  - node_type: SECTION
+    id: lesson-034-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-01
+      content: 一度お茶の作法を見て……。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-03
+      content: お菓子を食べます。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-04
+      content: はい、先にお菓子を食べます。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-05
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-06
+      content: 甘いお菓子を食べた後でお茶を飲みます。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 飲みます
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-07
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-08
+      content: お茶を飲んだら、次におちゃわんを2回回しながら置きなさい。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～を～ます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-09
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-10
+      content: これです。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+      - これ
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-11
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-12
+      content: 苦いですか。
+      content_json:
+        type: dialogue
+        speaker: 茶道先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-034-dialogue-13
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-035
+  content: 第35課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-035-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-035-pattern-01
+      content: 春になれば、花が咲きます。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-035-pattern-02
+      content: 天気がよければ、向こうに海が見えます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-035-pattern-03
+      content: 北海道へ行くなら、6月がいいです。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+  - node_type: SECTION
+    id: lesson-035-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-035-example-01
+      content: 雨が降れば、……。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-035-example-02
+      content: 意見があれば、言ってください。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - あれ
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-035-example-03
+      content: 元、特にありません。できれば、これで終わりましょう。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies:
+      - これ
+    - node_type: SENTENCE
+      id: lesson-035-example-04
+      content: 日本の生活はどうですか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+      - 日本
+    - node_type: SENTENCE
+      id: lesson-035-example-05
+      content: 便利です。もし暇があれば、遊びに来てください。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+      - あれ
+    - node_type: SENTENCE
+      id: lesson-035-example-06
+      content: このレポートを提出しなければなりませんか。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-035-example-07
+      content: 本を借りるなら、どうしますか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 本
+  - node_type: SECTION
+    id: lesson-035-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-01
+      content: あのう、冬スキーに行こうと思います。
+      content_json:
+        type: dialogue
+        speaker: サントス
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-02
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-03
+      content: 3日間行こうと思います。
+      content_json:
+        type: dialogue
+        speaker: サントス
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-04
+      content: どこへ行きますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-05
+      content: では、草津高原です。でも、温泉も……。
+      content_json:
+        type: dialogue
+        speaker: サントス
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～は～です
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-06
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-07
+      content: JRで行って夜に着き、朝からスキーをするのが便利です。
+      content_json:
+        type: dialogue
+        speaker: サントス
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      - ～の～
+      - ～で行きます
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-08
+      content: そうですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-09
+      content: 全部スキー用具を借りようと思います。でも、心配です。でも、旅館で予約をしておけば……。
+      content_json:
+        type: dialogue
+        speaker: サントス
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-035-dialogue-10
+      content: そうですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-036
+  content: 第36課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-036-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-036-pattern-01
+      content: 速く走れるように、毎日練習します。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-pattern-02
+      content: 日本語が話せるように、毎日勉強します。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 日本
+      - 本
+      - 勉強
+  - node_type: SECTION
+    id: lesson-036-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-036-example-01
+      content: その子は辞書が引けるようになりました。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - 辞書
+    - node_type: SENTENCE
+      id: lesson-036-example-02
+      content: サントスさんは日本語が話せるようになりました。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 日本
+      - 本
+    - node_type: SENTENCE
+      id: lesson-036-example-03
+      content: 日本の食べ物に慣れるようになりました。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 日本
+      - 本
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-036-example-04
+      content: ピアノが弾けるようになりましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-example-05
+      content: 元、弾けません。少し弾けるようになりました。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-example-06
+      content: 新しい仕事に慣れるようになりましたか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 仕事
+    - node_type: SENTENCE
+      id: lesson-036-example-07
+      content: 甘い物は食べないようにします。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-036-example-08
+      content: お酒を飲まないように、入れてくださいませんか。
+      content_json:
+        type: example_question
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～を～ます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-example-09
+      content: はい、入れます。
+      content_json:
+        type: example_answer
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-example-10
+      content: 小川さんは何をするようにしますか。
+      content_json:
+        type: example_question
+        example_number: 8
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-example-11
+      content: 小川さんは毎日運動をするようにします。
+      content_json:
+        type: example_answer
+        example_number: 8
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-036-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-01
+      content: この方法はどうですか。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-02
+      content: はい。特別なことをするようにします。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-03
+      content: 毎日運動をするようにします。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-04
+      content: 運動は何をするようにしますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-05
+      content: スポーツジムに行ったり、水泳をしたり……。最近は500メートル泳げるようになりました。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-06
+      content: そうですか。食べ物は？
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-07
+      content: 何でも食べます。特に魚が好きです。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～が～です
+      related_vocabularies:
+      - です
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-08
+      content: 毎日何を作るようにしますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-09
+      content: 元、来月フランスへ行くので、フランス語を勉強し始めました。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-036-dialogue-10
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+- node_type: TERM
+  id: lesson-037
+  content: 第37課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-037-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-037-pattern-01
+      content: 先生に呼ばれました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-pattern-02
+      content: 電車に足を踏まれました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-pattern-03
+      content: 法隆寺は607年に建てられました。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-037-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-037-example-01
+      content: 部屋で誰に呼ばれましたか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-02
+      content: 何を言いましたか。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-03
+      content: どこで足を踏まれましたか。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-04
+      content: 駅前で踏まれました。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-05
+      content: まだ新星が見つかれましたよ。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～よ
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-037-example-06
+      content: はい、見つかれました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-037-example-07
+      content: 会議は誰に開かれましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-08
+      content: 島田さんに開かれました。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-09
+      content: コーヒーはどこで飲まれましたか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-10
+      content: この店で飲まれました。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-example-11
+      content: このペンは何に使われますか。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-037-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 金閣寺は14世紀に建てられました
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-01
+      content: 金閣寺は有名ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～は～です
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-02
+      content: はい、金閣寺は14世紀に建てられました。
+      content_json:
+        type: dialogue
+        speaker: ガオ
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-03
+      content: 1950年に焼失しましたね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-04
+      content: はい、その後新しく建てられました。19世紀に建てられました。
+      content_json:
+        type: dialogue
+        speaker: ガオ
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-05
+      content: そうですか。壁は金色で、本物の金ですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-06
+      content: はい、です。
+      content_json:
+        type: dialogue
+        speaker: ガオ
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-07
+      content: そうですか。あそこに入れますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      - ～ますか
+      related_vocabularies:
+      - です
+      - あそこ
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-08
+      content: 中に入れません。
+      content_json:
+        type: dialogue
+        speaker: ガオ
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-09
+      content: 紅葉はいつ見れますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-037-dialogue-10
+      content: 元、寺の周りは秋が特に美しいと言われています。
+      content_json:
+        type: dialogue
+        speaker: ガオ
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-038
+  content: 第38課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-038-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-038-pattern-01
+      content: 絵を描くのが好きです。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: の表示所属/修饰；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-pattern-02
+      content: 星を見るのが好きです。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - です
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-038-pattern-03
+      content: 泳ぐのが上手です。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: の表示所属/修饰
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-pattern-04
+      content: 来月日本へ行くのが楽しみです。
+      content_json:
+        type: pattern
+        pattern_number: 4
+        note: の表示所属/修饰
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+      - 日本
+  - node_type: SECTION
+    id: lesson-038-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-038-example-01
+      content: 記事を書くのが始めました。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-038-example-02
+      content: その机で庭の手入れをするのが好きです。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-example-03
+      content: 東京へ行くのが嫌いです。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-example-04
+      content: はい、嫌いです。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-example-05
+      content: 何を食べるのが好きですか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      - ～ですか
+      - ～を～ます
+      related_vocabularies:
+      - です
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-038-example-06
+      content: 寿司を食べるのが好きです。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - です
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-038-example-07
+      content: 誰を知っているのが好きですか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～が～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-example-08
+      content: わたしの好きな彼女は音楽の先生です。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 私
+  - node_type: SECTION
+    id: lesson-038-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-01
+      content: トム先生、お世話になります。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-03
+      content: 先生の研究室はどこですか。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-04
+      content: わたしの好きな本はこれです。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 私
+      - これ
+      - 本
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-05
+      content: 本がたくさんあります……。整理の上手さがすごいです。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-06
+      content: 「上手な整理の方法」という本のことですね。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-07
+      content: 元、はい。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-08
+      content: あの本屋で売っています。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 本
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-09
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-10
+      content: 日本に来てから、どうですか。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+      - 日本
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-11
+      content: とても楽しいです。
+      content_json:
+        type: dialogue
+        speaker: 大学員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-038-dialogue-12
+      content: 先月、押入れの整理をしませんでしたか。
+      content_json:
+        type: dialogue
+        speaker: トム
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～の～
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-039
+  content: 第39課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-039-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-039-pattern-01
+      content: 遅刻をしたので、謝りました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: の表示所属/修饰；を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-pattern-02
+      content: 地震がでたので、建物が倒れました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-pattern-03
+      content: 体の調子が悪かったので、病院へ行きました。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: の表示所属/修饰；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 行きます
+  - node_type: SECTION
+    id: lesson-039-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-039-example-01
+      content: 何をしたので、怒られましたか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-example-02
+      content: 写真を見たので、怒られました。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-039-example-03
+      content: 今度の日曜日に何をするので、行きませんか。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～の～
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-039-example-04
+      content: 試験があるので、行きません。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～の～
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-039-example-05
+      content: どうしたので、泣きましたか。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-example-06
+      content: 事故がでたので、バスが遅れました。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-example-07
+      content: 飲みに行きませんか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～に行きます
+      related_vocabularies:
+      - 飲みます
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-039-example-08
+      content: はい、行きます。でも、疲れたので、行きません。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      - ～の～
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-039-example-09
+      content: 最近どうしたので、悪いですか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-039-example-10
+      content: 部屋が狭くて、邪魔な友達が来たので、悪いです。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+  - node_type: SECTION
+    id: lesson-039-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-01
+      content: 事故がでたので、どうしましたか。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-03
+      content: それは大変ですね。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～は～です
+      related_vocabularies:
+      - です
+      - それ
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-04
+      content: はい、心配です。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-05
+      content: 話があります。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-06
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-07
+      content: 会議が始まります。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-08
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-09
+      content: 課長、あのう、今日人が来ます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 人
+    - node_type: SENTENCE
+      id: lesson-039-dialogue-10
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-040
+  content: 第40課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-040-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-040-pattern-01
+      content: JRは何時に出発しますか。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；か表示疑问
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-pattern-02
+      content: 9時に到着します。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-040-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-040-example-01
+      content: 次の会議はいつにしますか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-02
+      content: 水曜日にします。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-03
+      content: どこで会うことにしましたか。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-04
+      content: レストランにしました。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-05
+      content: いつ会うことにしましたか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-06
+      content: 忘年会の返事を待つことにしました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-07
+      content: 何を食べることにしましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-040-example-08
+      content: はい、しました。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-09
+      content: 大学に行くことにしませんでした。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～に行きます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-10
+      content: はい、しませんでした。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-example-11
+      content: 課長に話すことにしました。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-040-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-01
+      content: 先生、ホームステイの学校はどうですか。友達ができるかどうか、心配です……。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 学校
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-02
+      content: 大丈夫です。ホームステイの人は親切です。
+      content_json:
+        type: dialogue
+        speaker: 伊藤先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 人
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-03
+      content: はい。安心しました。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-04
+      content: 日本語の勉強はどうですか。
+      content_json:
+        type: dialogue
+        speaker: 伊藤先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+      - 日本
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-05
+      content: がんばっています。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-06
+      content: 毎日勉強することにしましょう。
+      content_json:
+        type: dialogue
+        speaker: 伊藤先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 勉強
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-07
+      content: はい、ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-08
+      content: それでは、会ってお父さんに伝えてください。
+      content_json:
+        type: dialogue
+        speaker: 伊藤先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - それ
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-09
+      content: 元元。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-040-dialogue-10
+      content: では、また。
+      content_json:
+        type: dialogue
+        speaker: 伊藤先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-041
+  content: 第41課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-041-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-041-pattern-01
+      content: トム先生に本を贈ります。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 本
+    - node_type: SENTENCE
+      id: lesson-041-pattern-02
+      content: 先生に漢字の書き方を直してもらいます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰；に表示时间/地点/方向；を表示宾语；も表示也/同样
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-pattern-03
+      content: 茶道の先生にお茶の入れ方を教えてもらいます。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: の表示所属/修饰；に表示时间/地点/方向；を表示宾语；も表示也/同样
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～も
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-pattern-04
+      content: 友達に誕生日のプレゼントをもらいます。
+      content_json:
+        type: pattern
+        pattern_number: 4
+        note: の表示所属/修饰；に表示时间/地点/方向；を表示宾语；も表示也/同样
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-041-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-041-example-01
+      content: 誰にプレゼントを贈りますか。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-example-02
+      content: どうして泣いているのですか。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-041-example-03
+      content: 会いたい人に会いましたか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 人
+    - node_type: SENTENCE
+      id: lesson-041-example-04
+      content: はい、会いました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-example-05
+      content: 誰に手紙を書きますか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 手紙
+    - node_type: SENTENCE
+      id: lesson-041-example-06
+      content: 家族に手紙を書きます。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 家
+      - 手紙
+    - node_type: SENTENCE
+      id: lesson-041-example-07
+      content: 体のことで誰に相談しますか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-example-08
+      content: 先生に相談します。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-example-09
+      content: 誰に日本語を教えてもらいますか。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～ますか
+      related_vocabularies:
+      - 日本
+      - 本
+  - node_type: SECTION
+    id: lesson-041-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 結婚の乾杯
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-041-dialogue-01
+      content: 結婚、おめでとうございます。乾杯。
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-dialogue-02
+      content: 乾杯。
+      content_json:
+        type: dialogue
+        speaker: 皆
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-dialogue-03
+      content: 去年、先生に英語を教えていただきました。先生、どうもありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: 松本良子
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-041-dialogue-04
+      content: 先生は「上手な整理の方法」という本を書きましたね。先生の整理の上手さは、研究室やお宅でも有名ですね。
+      content_json:
+        type: dialogue
+        speaker: 大学職員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～も
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-041-dialogue-05
+      content: トム先生、今度「結婚の方法」という本を書いてください。勉強したいと思います。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 本
+      - 勉強
+- node_type: TERM
+  id: lesson-042
+  content: 第42課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-042-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-042-pattern-01
+      content: マラソンに参加するために、毎日練習します。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-pattern-02
+      content: 一人で山に登るのは危険です。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: は表示主题/主语；の表示所属/修饰；に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 人
+    - node_type: SENTENCE
+      id: lesson-042-pattern-03
+      content: 健康のために、運動をします。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: の表示所属/修饰；に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-pattern-04
+      content: 机を曲げないでください。
+      content_json:
+        type: pattern
+        pattern_number: 4
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-pattern-05
+      content: この本を作るのは難しいです。
+      content_json:
+        type: pattern
+        pattern_number: 5
+        note: は表示主题/主语；の表示所属/修饰；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+  - node_type: SECTION
+    id: lesson-042-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-042-example-01
+      content: 盆踊りに参加するために、毎日練習します。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-example-02
+      content: 一人で山に登るのは危険です。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 人
+    - node_type: SENTENCE
+      id: lesson-042-example-03
+      content: 健康のために、早く寝ます。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 寝ます
+    - node_type: SENTENCE
+      id: lesson-042-example-04
+      content: この本を作るのは難しいです。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-042-example-05
+      content: これは何に使うのですか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - これ
+    - node_type: SENTENCE
+      id: lesson-042-example-06
+      content: 2、3日間出張します。
+      content_json:
+        type: example
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-example-07
+      content: この仕事をするのは大変です。
+      content_json:
+        type: example
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+      - 仕事
+  - node_type: SECTION
+    id: lesson-042-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: キャリーバッグは荷物に使います
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-01
+      content: 林さん、一出張ですね。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-02
+      content: 来月です。鈴木さんは会社にいますか。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies:
+      - です
+      - 会社
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-03
+      content: はい。キャリーバッグを買いました。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 買います
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-04
+      content: 元元。鈴木さんは何に使うのですか。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-05
+      content: 荷物に使います。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-06
+      content: お金がたくさんありますね。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-07
+      content: 貯金をすることを考えていますが、あまりしません。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-08
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-09
+      content: 元、半分は貯金をします。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-042-dialogue-10
+      content: 元、独身の人は全部貯金をするのではないですか。子どもの教育、お金がかかるので、残りは使います。
+      content_json:
+        type: dialogue
+        speaker: 小川
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 人
+- node_type: TERM
+  id: lesson-043
+  content: 第43課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-043-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-043-pattern-01
+      content: 今にも雨が降りそうです
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；も表示也/同样
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-pattern-02
+      content: ちょっと切符を買って来ます
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: を表示宾语；と表示和/一起
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-043-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-043-example-01
+      content: 上着のボタンがとれそうですよ。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-02
+      content: 暖かくなりそうです。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-03
+      content: このケーキはおいしそうです。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-04
+      content: あのケーキもおいしそうです。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-05
+      content: どうして遅れそうですか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-06
+      content: 給料が少ないからです。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-example-07
+      content: 資料が間に合いそうでせんね。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-043-example-08
+      content: はい、です。4時までには間に合いそうです。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～まで
+      related_vocabularies:
+      - です
+  - node_type: SECTION
+    id: lesson-043-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-01
+      content: この写真、すてきですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-03
+      content: お元気ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-04
+      content: はい。マラソンを走っています。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-05
+      content: そうですか。この本は小さいですね。友達と毎日走っています。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 本
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-06
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-07
+      content: どうして走っていますか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-08
+      content: 奥さんが走っているからです。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-09
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-043-dialogue-10
+      content: はい。特に好きな天気の時は古い道を歩きます。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-044
+  content: 第44課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-044-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-044-pattern-01
+      content: 吉田さんはお酒を飲みすぎます。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～を～ます
+      related_vocabularies:
+      - 飲みます
+    - node_type: SENTENCE
+      id: lesson-044-pattern-02
+      content: このペンは使いにくいです。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: は表示主题/主语；の表示所属/修饰；に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-pattern-03
+      content: ズボンを短くしてください。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-044-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-044-example-01
+      content: 何を食べすぎましたか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-044-example-02
+      content: ケーキを食べすぎました。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 食べます
+    - node_type: SENTENCE
+      id: lesson-044-example-03
+      content: 最近ピアノが弾きにくいです。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-04
+      content: 田舎の生活はどうですか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-05
+      content: 物価が安くて、空気がきれいです。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-06
+      content: この靴は履きにくいですか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-07
+      content: はい、使いにくいです。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-08
+      content: 夜、よく眠れないです。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-09
+      content: はい、眠れないです。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-044-example-10
+      content: 飲み物は何を飲みますか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～を～ます
+      - ～ますか
+      related_vocabularies:
+      - 飲みます
+    - node_type: SENTENCE
+      id: lesson-044-example-11
+      content: ビールを飲みます。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      related_vocabularies:
+      - 飲みます
+  - node_type: SECTION
+    id: lesson-044-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-01
+      content: いらっしゃいませ。
+      content_json:
+        type: dialogue
+        speaker: 美容師
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-02
+      content: カットをして、お願いします。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-03
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 美容師
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-04
+      content: どのようにカットしますか。
+      content_json:
+        type: dialogue
+        speaker: 美容師
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-05
+      content: この写真のように、お願いします。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-06
+      content: あ、これですね。
+      content_json:
+        type: dialogue
+        speaker: 美容師
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+      - これ
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-07
+      content: はい。少し短くしてください。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-08
+      content: はい、分かりました。
+      content_json:
+        type: dialogue
+        speaker: 美容師
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-044-dialogue-09
+      content: ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-045
+  content: 第45課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-045-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-045-pattern-01
+      content: がんばってください。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-pattern-02
+      content: 東京へ彼女が来ることになりました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；と表示和/一起；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-045-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-045-example-01
+      content: 地下鉄が合わないので、無理に会社へ行かないでください。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 会社
+    - node_type: SENTENCE
+      id: lesson-045-example-02
+      content: はい、行きません。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-045-example-03
+      content: 保証人が必要です。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+      - 人
+    - node_type: SENTENCE
+      id: lesson-045-example-04
+      content: はい、必要です。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-example-05
+      content: 領収書をください。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-example-06
+      content: はい、ください。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-example-07
+      content: 何をしましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-example-08
+      content: はい、しました。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-example-09
+      content: スピーチの方がよくないですか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-example-10
+      content: 忘れないでください。はい、です。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - です
+  - node_type: SECTION
+    id: lesson-045-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-01
+      content: がんばってください。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 参加者全员
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-03
+      content: はい。スピーチの前に合わせてください。
+      content_json:
+        type: dialogue
+        speaker: 参加者1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-04
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-05
+      content: あのう、もし中に増えたら合うのですか？
+      content_json:
+        type: dialogue
+        speaker: 参加者2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-06
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-07
+      content: 2位ですね。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-08
+      content: 2位です。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-09
+      content: はい、一生懸命練習しましたが、でも残念です。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-045-dialogue-10
+      content: では、来年がんばりましょう。
+      content_json:
+        type: dialogue
+        speaker: 鈴木
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-046
+  content: 第46課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-046-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-046-pattern-01
+      content: 雨が降り始めました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-pattern-02
+      content: 彼は3月に大学を卒業しました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-pattern-03
+      content: 三時に会議室を出ました。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: に表示时间/地点/方向；を表示宾语；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-046-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-046-example-01
+      content: もしもし、田中さんですか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-example-02
+      content: 話を始めます。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-example-03
+      content: 故障の原因が分かり始めました。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-example-04
+      content: わたしはまだ片付けています。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 私
+    - node_type: SENTENCE
+      id: lesson-046-example-05
+      content: 渡辺さんはもう片付け終わりました。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-example-06
+      content: 仕事は終わりましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 仕事
+    - node_type: SENTENCE
+      id: lesson-046-example-07
+      content: はい、会社に着く前に終わりました。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 会社
+    - node_type: SENTENCE
+      id: lesson-046-example-08
+      content: もしもし、誰ですか。
+      content_json:
+        type: example
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-example-09
+      content: 一人で飛行機で行けましたか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～で行きます
+      related_vocabularies:
+      - 人
+    - node_type: SENTENCE
+      id: lesson-046-example-10
+      content: はい、行けました。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-046-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 先ほど……
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-01
+      content: コーヒーです。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-02
+      content: 調子が悪いです……。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-03
+      content: どの具合が悪いですか。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-04
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-05
+      content: 先ほど電気が消えました。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-06
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-07
+      content: 住所と名前をお願いします。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 名前
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-08
+      content: はい、歩いてです、まだです。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-09
+      content: 申し訳ありません。上がってください。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-10
+      content: タクポンです。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-11
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-12
+      content: ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: タクポン
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-046-dialogue-13
+      content: あと10分お待ちください。
+      content_json:
+        type: dialogue
+        speaker: 係員
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-047
+  content: 第47課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-047-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-047-pattern-01
+      content: 天気が予報より悪くなると、大変寒くなります。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: と表示和/一起
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-pattern-02
+      content: この本を読むと、分かります。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: の表示所属/修饰；を表示宾语；と表示和/一起
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 本
+  - node_type: SECTION
+    id: lesson-047-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-047-example-01
+      content: スポーツをすると、あっという間に疲れます。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-example-02
+      content: 手紙を書くと、フランス語が分かります。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 手紙
+    - node_type: SENTENCE
+      id: lesson-047-example-03
+      content: 辞書を使わないで読むと、分かりません。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies:
+      - 辞書
+    - node_type: SENTENCE
+      id: lesson-047-example-04
+      content: 先ほど先生に会いましたか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-example-05
+      content: 元、会いませんでした。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-example-06
+      content: 隣の部屋で誰かの声がします。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-example-07
+      content: はい、します。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-047-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 結婚の話
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-01
+      content: お先に失礼します。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-03
+      content: そう、急ぎますね。
+      content_json:
+        type: dialogue
+        speaker: 渡辺
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-04
+      content: はい。恋人が来ます。
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 人
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-05
+      content: 知っていました。結婚するんですね。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-06
+      content: 元、はい、でも、相手がいません。
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      - ～も
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-07
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-08
+      content: 元、鈴木さんは？
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-09
+      content: 結婚することを知っていました。
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-10
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-11
+      content: あのう、高橋さんは？
+      content_json:
+        type: dialogue
+        speaker: 林
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-047-dialogue-12
+      content: はい。仕事が忙しくて恋人がいません。
+      content_json:
+        type: dialogue
+        speaker: 高橋
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies:
+      - 人
+      - 仕事
+- node_type: TERM
+  id: lesson-048
+  content: 第48課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-048-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-048-pattern-01
+      content: 息子に本を読ませます。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 本
+    - node_type: SENTENCE
+      id: lesson-048-pattern-02
+      content: 娘にピアノを弾かせます。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；を表示宾语
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-048-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-048-example-01
+      content: 誰に本を読ませますか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 本
+    - node_type: SENTENCE
+      id: lesson-048-example-02
+      content: 元、毎日方を読ませます。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-03
+      content: お先に失礼します。
+      content_json:
+        type: example_question
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-04
+      content: 息子に車で送らせます。はい、送らせます。
+      content_json:
+        type: example_answer
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-05
+      content: 誰に行かせますか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-06
+      content: 元、友達に行かせます。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-07
+      content: 伊藤先生は生徒に先生に自由に意見を言わせます。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-048-example-08
+      content: はい。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-example-09
+      content: よく正しく言わせます。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-048-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 休暇の申請
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-01
+      content: 今、ちょっと忙しいです。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-02
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-03
+      content: 何ですか。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-04
+      content: 休暇を取らせてください。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-05
+      content: 10日間ですか。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-06
+      content: はい、友達の結婚式です。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-07
+      content: そうですか。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-08
+      content: 元一と、来月20日に営業会議があります。それまでに済ませます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～まで
+      related_vocabularies:
+      - それ
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-09
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 中村課長
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-048-dialogue-10
+      content: では、来月に。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-049
+  content: 第49課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-049-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-049-pattern-01
+      content: 課長が馬鹿にしました。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-pattern-02
+      content: 社長がお世話になりました。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向；ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-pattern-03
+      content: 部長がアメリカへ出張しました。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: ました表示过去
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-pattern-04
+      content: お待たせしてください。
+      content_json:
+        type: pattern
+        pattern_number: 4
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-049-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-049-example-01
+      content: この本を読ませましたか。
+      content_json:
+        type: example_question
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      related_vocabularies:
+      - 本
+    - node_type: SENTENCE
+      id: lesson-049-example-02
+      content: 元、はい、読ませました。
+      content_json:
+        type: example_answer
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-03
+      content: 部長に何をされましたか。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-04
+      content: よく映画を見せますか。
+      content_json:
+        type: example
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～を～ます
+      - ～ますか
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-049-example-05
+      content: 息子が大学に合格させました。
+      content_json:
+        type: example
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-06
+      content: 誰に会わせましたか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-07
+      content: トムさんに会わせました。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-08
+      content: 誰に話を聞かせましたか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-example-09
+      content: 銀行員に聞かせました。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 銀行
+    - node_type: SENTENCE
+      id: lesson-049-example-10
+      content: 松本さんは部長に何をされましたか。
+      content_json:
+        type: example
+        example_number: 7
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies:
+      - 本
+  - node_type: SECTION
+    id: lesson-049-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: よろしく お伝えください
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-01
+      content: 小学校に行きます。
+      content_json:
+        type: dialogue
+        speaker: 先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies:
+      - 行きます
+      - 学校
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-02
+      content: お世話になります。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-03
+      content: では……。
+      content_json:
+        type: dialogue
+        speaker: 先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-04
+      content: 伊藤先生によろしくお伝えください。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-05
+      content: はい。
+      content_json:
+        type: dialogue
+        speaker: 先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-06
+      content: お疲れさまです。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～まで
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-07
+      content: ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: 先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-08
+      content: はい、大事に。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-049-dialogue-09
+      content: ありがとう。
+      content_json:
+        type: dialogue
+        speaker: 先生
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+- node_type: TERM
+  id: lesson-050
+  content: 第50課
+  content_json:
+    level: N4
+    book: 初级下册
+    type: lesson
+  sections:
+  - node_type: SECTION
+    id: lesson-050-patterns
+    content: 文型
+    content_json:
+      type: grammar_patterns
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-050-pattern-01
+      content: お送りします。
+      content_json:
+        type: pattern
+        pattern_number: 1
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-pattern-02
+      content: あした3時にお伺いします。
+      content_json:
+        type: pattern
+        pattern_number: 2
+        note: に表示时间/地点/方向
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-pattern-03
+      content: 私がかけて参ります。
+      content_json:
+        type: pattern
+        pattern_number: 3
+        note: ''
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 私
+  - node_type: SECTION
+    id: lesson-050-examples
+    content: 例文
+    content_json:
+      type: example_sentences
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-050-example-01
+      content: 何をお見せしますか。
+      content_json:
+        type: example
+        example_number: 1
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-050-example-02
+      content: どこへお行きですか。
+      content_json:
+        type: example
+        example_number: 2
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-050-example-03
+      content: 行く人はどうですか。
+      content_json:
+        type: example_question
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ですか
+      related_vocabularies:
+      - です
+      - 人
+    - node_type: SENTENCE
+      id: lesson-050-example-04
+      content: 「私が参ります」。
+      content_json:
+        type: example_answer
+        example_number: 3
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies:
+      - 私
+    - node_type: SENTENCE
+      id: lesson-050-example-05
+      content: 切符をお取りしますか。
+      content_json:
+        type: example_question
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-example-06
+      content: はい、お取りします。
+      content_json:
+        type: example_answer
+        example_number: 4
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-example-07
+      content: これをお持ちしますか。
+      content_json:
+        type: example_question
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ますか
+      related_vocabularies:
+      - これ
+    - node_type: SENTENCE
+      id: lesson-050-example-08
+      content: はい、お持ちします。
+      content_json:
+        type: example_answer
+        example_number: 5
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-example-09
+      content: ご家族にお伝えしますか。
+      content_json:
+        type: example_question
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～ますか
+      related_vocabularies:
+      - 家
+    - node_type: SENTENCE
+      id: lesson-050-example-10
+      content: はい、お伝えします。
+      content_json:
+        type: example_answer
+        example_number: 6
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+  - node_type: SECTION
+    id: lesson-050-dialogue
+    content: 会話
+    content_json:
+      type: conversation
+      dialogue_title: 衷心感谢
+    sentences:
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-01
+      content: おめでとうございます。一位です。あなたのスピーチはすばらしかったです。
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-02
+      content: ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-03
+      content: 緊張しましたか？
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars: []
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-04
+      content: はい、とても緊張しました。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-05
+      content: 練習は大変でしたか？
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-06
+      content: ええ。忙しくて、練習する時間があまりありませんでした。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ません
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-07
+      content: 賞金は何に使いますか？
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～は～です
+      - ～ますか
+      related_vocabularies: []
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-08
+      content: ええ、わたしは動物が大好きで、小さい時からアフリカに行く夢がありました。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～から
+      - ～に行きます
+      - ～は～です
+      related_vocabularies:
+      - 私
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-09
+      content: では、アフリカに行きますか？
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～に行きます
+      - ～は～です
+      - ～ますか
+      related_vocabularies:
+      - 行きます
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-10
+      content: はい。アフリカの大自然の中でキリンや象を見たいです。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～の～
+      - ～を～ます
+      related_vocabularies:
+      - です
+      - 見ます
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-11
+      content: そうですね。幼い頃の夢が叶いますね。
+      content_json:
+        type: dialogue
+        speaker: 司会者
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～ね
+      - ～の～
+      related_vocabularies:
+      - です
+    - node_type: SENTENCE
+      id: lesson-050-dialogue-12
+      content: ええ。とても嬉しいです。応援してくださった皆様、心から感謝します。ありがとうございます。
+      content_json:
+        type: dialogue
+        speaker: ミラー
+      translation:
+        zh: ''
+        en: ''
+      related_grammars:
+      - ～も
+      - ～から
+      related_vocabularies:
+      - です

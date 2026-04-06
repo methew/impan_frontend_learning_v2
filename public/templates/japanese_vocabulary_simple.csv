@@ -1,0 +1,48 @@
+# JLPT N5 简单词汇导入模板 (parent_id 版本)
+# 注意：CSV 格式使用 term_id 来关联多音字
+#
+# 字段说明：
+# - id: 节点唯一标识
+# - node_type: 节点类型 (TERM_ROOT/READING/SENSE)
+# - parent_id: 父节点 ID（READING 指向 TERM，SENSE 指向 READING）
+# - content: 内容（词条/读音/释义）
+# - pos: 词性 (noun/verb/adjective/etc)
+# - jlpt_level: JLPT 等级
+# - gloss_zh: 中文释义
+# - gloss_en: 英文释义
+# - is_primary: 是否主要读音 (true/false)
+# - example: 例句
+
+id,node_type,parent_id,content,pos,jlpt_level,gloss_zh,gloss_en,is_primary,example
+term-001,TERM_ROOT,,本,noun,N5,,,,,
+reading-001,READING,term-001,ほん,noun,N5,book,book,true,これは本です。
+sense-001,SENSE,reading-001,,noun,N5,书,book,,
+term-002,TERM_ROOT,,人,noun,N5,,,,,
+reading-002,READING,term-002,ひと,noun,N5,person,person,true,あの人は先生です。
+sense-002,SENSE,reading-002,,noun,N5,人,person,,
+term-003,TERM_ROOT,,水,noun,N5,,,,,
+reading-003,READING,term-003,みず,noun,N5,water,water,true,水を飲みます。
+sense-003,SENSE,reading-003,,noun,N5,水,water,,
+term-004,TERM_ROOT,,山,noun,N5,,,,,
+reading-004,READING,term-004,やま,noun,N5,mountain,mountain,true,富士山
+reading-005,READING,term-004,さん,noun,N5,mountain (suffix),mountain,false,富士山
+sense-004,SENSE,reading-004,,noun,N5,山,mountain,,
+sense-005,SENSE,reading-005,,noun,N5,山,mountain suffix,,
+term-005,TERM_ROOT,,行く,verb,N5,,,,,
+reading-006,READING,term-005,いく,verb,N5,go,go,true,学校に行く。
+sense-006,SENSE,reading-006,,verb,N5,去，走,go,,
+term-006,TERM_ROOT,,来る,verb,N5,,,,,
+reading-007,READING,term-006,くる,verb,N5,come,come,true,友達が来る。
+sense-007,SENSE,reading-007,,verb,N5,来,come,,
+term-007,TERM_ROOT,,食べる,verb,N5,,,,,
+reading-008,READING,term-007,たべる,verb,N5,eat,eat,true,ご飯を食べる。
+sense-008,SENSE,reading-008,,verb,N5,吃,eat,,
+term-008,TERM_ROOT,,見る,verb,N5,,,,,
+reading-009,READING,term-008,みる,verb,N5,see,see,true,映画を見る。
+sense-009,SENSE,reading-009,,verb,N5,看,see,,
+term-009,TERM_ROOT,,大きい,adjective,N5,,,,,
+reading-010,READING,term-009,おおきい,adjective,N5,big,big,true,大きい家
+sense-010,SENSE,reading-010,,adjective,N5,大的,big,,
+term-010,TERM_ROOT,,小さい,adjective,N5,,,,,
+reading-011,READING,term-010,ちいさい,adjective,N5,small,small,true,小さい猫
+sense-011,SENSE,reading-011,,adjective,N5,小的,small,,

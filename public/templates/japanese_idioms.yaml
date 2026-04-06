@@ -1,0 +1,195 @@
+# ===========================================
+# 日语惯用语导入模板
+# ===========================================
+# 用于导入惯用语、成语、谚语
+
+idioms:
+  # --------------------
+  # 示例 1: 一期一会
+  # --------------------
+  - node_type: IDIOM_ROOT
+    id: idiom-001
+    content: 一期一会
+    content_json:
+      level: N3
+      category: 四字熟語
+      origin: 茶道
+    
+    readings:
+      - node_type: READING
+        id: reading-001
+        content: いちごいちえ
+        content_json:
+          is_primary: true
+          romaji: ichigoichie
+    
+    senses:
+      - node_type: SENSE
+        id: sense-001
+        content_json:
+          sense_order: 1
+        glosses:
+          - node_type: GLOSS
+            content: 一生只有一次的缘分
+            content_json:
+              lang: zh
+          - node_type: GLOSS
+            content: once in a lifetime encounter
+            content_json:
+              lang: en
+    
+    examples:
+      - node_type: EXAMPLE
+        content: 一期一会の出会いを大切にしよう。
+        content_json:
+          translation_zh: 珍惜一生只有一次的相遇吧。
+          translation_en: Let's treasure this once-in-a-lifetime encounter.
+
+  # --------------------
+  # 示例 2: 猿も木から落ちる
+  # --------------------
+  - node_type: IDIOM_ROOT
+    id: idiom-002
+    content: 猿も木から落ちる
+    content_json:
+      level: N4
+      category: 諺
+      literal_meaning: 猴子也会从树上掉下来
+    
+    readings:
+      - node_type: READING
+        id: reading-002
+        content: さるもきからおちる
+        content_json:
+          is_primary: true
+          romaji: saru mo ki kara ochiru
+    
+    senses:
+      - node_type: SENSE
+        id: sense-002
+        content_json:
+          sense_order: 1
+        glosses:
+          - node_type: GLOSS
+            content: 智者千虑，必有一失
+            content_json:
+              lang: zh
+          - node_type: GLOSS
+            content: even monkeys fall from trees
+            content_json:
+              lang: en
+    
+    examples:
+      - node_type: EXAMPLE
+        content: 彼は普段は慎重だが、今回は失敗した。猿も木から落ちるということだ。
+        content_json:
+          translation_zh: 他平时很谨慎，但这次失败了。这就是智者千虑必有一失。
+
+  # --------------------
+  # 示例 3: 花より団子
+  # --------------------
+  - node_type: IDIOM_ROOT
+    id: idiom-003
+    content: 花より団子
+    content_json:
+      level: N4
+      category: 諺
+      literal_meaning: 团子比花好
+    
+    readings:
+      - node_type: READING
+        id: reading-003
+        content: はなよりだんご
+        content_json:
+          is_primary: true
+          romaji: hana yori dango
+    
+    senses:
+      - node_type: SENSE
+        id: sense-003
+        content_json:
+          sense_order: 1
+        glosses:
+          - node_type: GLOSS
+            content: 舍华求实；务实不务虚
+            content_json:
+              lang: zh
+          - node_type: GLOSS
+            content: substance over style
+            content_json:
+              lang: en
+    
+    examples:
+      - node_type: EXAMPLE
+        content: 彼女は花より団子のタイプで、見た目より中身を重視する。
+        content_json:
+          translation_zh: 她是舍华求实的类型，重视内在胜过外表。
+
+  # --------------------
+  # 示例 4: 七転び八起き
+  # --------------------
+  - node_type: IDIOM_ROOT
+    id: idiom-004
+    content: 七転び八起き
+    content_json:
+      level: N3
+      category: 諺
+      literal_meaning: 跌倒七次，爬起来八次
+    
+    readings:
+      - node_type: READING
+        id: reading-004
+        content: ななころびやおき
+        content_json:
+          is_primary: true
+          romaji: nana korobi ya oki
+    
+    senses:
+      - node_type: SENSE
+        id: sense-004
+        content_json:
+          sense_order: 1
+        glosses:
+          - node_type: GLOSS
+            content: 百折不挠；跌倒爬起
+            content_json:
+              lang: zh
+          - node_type: GLOSS
+            content: fall seven times, stand up eight
+            content_json:
+              lang: en
+    
+    examples:
+      - node_type: EXAMPLE
+        content: 失敗しても諦めないで。七転び八起きの精神で頑張ろう。
+        content_json:
+          translation_zh: 即使失败也不要放弃。以百折不挠的精神努力吧。
+
+# ===========================================
+# 节点类型说明
+# ===========================================
+#
+# IDIOM_ROOT: 惯用语根节点
+#   - content: 惯用语原文
+#   - content_json.level: JLPT 等级
+#   - content_json.category: 类别（四字熟語/諺/慣用句）
+#   - content_json.origin: 出处（可选）
+#   - content_json.literal_meaning: 字面意思
+#
+# READING: 读音节点
+#   - content: 假名读音
+#   - content_json.romaji: 罗马音
+#
+# SENSE: 义项节点
+#   - content_json.sense_order: 义项顺序
+#
+# GLOSS: 释义节点（多语言）
+#   - content: 释义内容
+#   - content_json.lang: 语言代码（zh/en）
+#
+# EXAMPLE: 例句节点
+#   - content: 例句原文
+#   - content_json.translation_zh: 中文翻译
+#   - content_json.translation_en: 英文翻译
+#
+# ===========================================

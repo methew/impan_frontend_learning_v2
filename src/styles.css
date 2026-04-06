@@ -1,6 +1,32 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* 振り仮名样式 */
+ruby {
+  ruby-align: center;
+}
+
+ruby rt {
+  font-size: 0.5em;
+  line-height: 1;
+  color: var(--muted-foreground);
+}
+
+/* 简化版振り仮名 */
+.ruby-text {
+  display: ruby;
+  ruby-position: over;
+}
+
+/* 汉字详情卡片 */
+.kanji-card {
+  @apply transition-all duration-200;
+}
+
+.kanji-card:hover {
+  @apply shadow-lg;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

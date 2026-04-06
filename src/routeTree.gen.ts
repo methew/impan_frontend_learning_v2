@@ -18,8 +18,10 @@ import { Route as ExamsRouteImport } from './routes/exams'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LearningIndexRouteImport } from './routes/learning/index'
+import { Route as JaIndexRouteImport } from './routes/ja/index'
 import { Route as ExamsIndexRouteImport } from './routes/exams/index'
 import { Route as OauthCallbackRouteImport } from './routes/oauth.callback'
+import { Route as JaImportRouteImport } from './routes/ja/import'
 import { Route as ExamsExamIdRouteImport } from './routes/exams/$examId'
 import { Route as LearningWritingIndexRouteImport } from './routes/learning/writing/index'
 import { Route as LearningVocabIndexRouteImport } from './routes/learning/vocab/index'
@@ -32,15 +34,23 @@ import { Route as LearningFlashcardsIndexRouteImport } from './routes/learning/f
 import { Route as LearningCoursesIndexRouteImport } from './routes/learning/courses/index'
 import { Route as LearningContentIndexRouteImport } from './routes/learning/content/index'
 import { Route as LearningCategoriesIndexRouteImport } from './routes/learning/categories/index'
+import { Route as JaVocabularyIndexRouteImport } from './routes/ja/vocabulary/index'
+import { Route as JaLearnIndexRouteImport } from './routes/ja/learn/index'
 import { Route as LearningWritingPracticeRouteImport } from './routes/learning/writing/practice'
 import { Route as LearningFlashcardsDeckIdRouteImport } from './routes/learning/flashcards/$deckId'
 import { Route as LearningCoursesIdRouteImport } from './routes/learning/courses/$id'
 import { Route as LearningContentNewRouteImport } from './routes/learning/content/new'
+import { Route as JaVocabularyImportRouteImport } from './routes/ja/vocabulary/import'
+import { Route as JaVocabularyTermRouteImport } from './routes/ja/vocabulary/$term'
+import { Route as JaTextsImportRouteImport } from './routes/ja/texts/import'
+import { Route as JaIdiomsImportRouteImport } from './routes/ja/idioms/import'
+import { Route as JaGrammarImportRouteImport } from './routes/ja/grammar/import'
 import { Route as ExamsSessionExamIdRouteImport } from './routes/exams/session.$examId'
 import { Route as ExamsResultsAttemptIdRouteImport } from './routes/exams/results/$attemptId'
 import { Route as LearningFlashcardsStudyDeckIdRouteImport } from './routes/learning/flashcards/study.$deckId'
 import { Route as LearningCoursesIdEditRouteImport } from './routes/learning/courses/$id.edit'
 import { Route as LearningContentTypeIdRouteImport } from './routes/learning/content/$type.$id'
+import { Route as JaVocabularyTermEditRouteImport } from './routes/ja/vocabulary/$term.edit'
 
 const StatsRoute = StatsRouteImport.update({
   id: '/stats',
@@ -87,6 +97,11 @@ const LearningIndexRoute = LearningIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LearningRoute,
 } as any)
+const JaIndexRoute = JaIndexRouteImport.update({
+  id: '/ja/',
+  path: '/ja/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExamsIndexRoute = ExamsIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -95,6 +110,11 @@ const ExamsIndexRoute = ExamsIndexRouteImport.update({
 const OauthCallbackRoute = OauthCallbackRouteImport.update({
   id: '/oauth/callback',
   path: '/oauth/callback',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaImportRoute = JaImportRouteImport.update({
+  id: '/ja/import',
+  path: '/ja/import',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExamsExamIdRoute = ExamsExamIdRouteImport.update({
@@ -157,6 +177,16 @@ const LearningCategoriesIndexRoute = LearningCategoriesIndexRouteImport.update({
   path: '/categories/',
   getParentRoute: () => LearningRoute,
 } as any)
+const JaVocabularyIndexRoute = JaVocabularyIndexRouteImport.update({
+  id: '/ja/vocabulary/',
+  path: '/ja/vocabulary/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaLearnIndexRoute = JaLearnIndexRouteImport.update({
+  id: '/ja/learn/',
+  path: '/ja/learn/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LearningWritingPracticeRoute = LearningWritingPracticeRouteImport.update({
   id: '/writing/practice',
   path: '/writing/practice',
@@ -177,6 +207,31 @@ const LearningContentNewRoute = LearningContentNewRouteImport.update({
   id: '/content/new',
   path: '/content/new',
   getParentRoute: () => LearningRoute,
+} as any)
+const JaVocabularyImportRoute = JaVocabularyImportRouteImport.update({
+  id: '/ja/vocabulary/import',
+  path: '/ja/vocabulary/import',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaVocabularyTermRoute = JaVocabularyTermRouteImport.update({
+  id: '/ja/vocabulary/$term',
+  path: '/ja/vocabulary/$term',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaTextsImportRoute = JaTextsImportRouteImport.update({
+  id: '/ja/texts/import',
+  path: '/ja/texts/import',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaIdiomsImportRoute = JaIdiomsImportRouteImport.update({
+  id: '/ja/idioms/import',
+  path: '/ja/idioms/import',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JaGrammarImportRoute = JaGrammarImportRouteImport.update({
+  id: '/ja/grammar/import',
+  path: '/ja/grammar/import',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ExamsSessionExamIdRoute = ExamsSessionExamIdRouteImport.update({
   id: '/session/$examId',
@@ -204,6 +259,11 @@ const LearningContentTypeIdRoute = LearningContentTypeIdRouteImport.update({
   path: '/content/$type/$id',
   getParentRoute: () => LearningRoute,
 } as any)
+const JaVocabularyTermEditRoute = JaVocabularyTermEditRouteImport.update({
+  id: '/edit',
+  path: '/edit',
+  getParentRoute: () => JaVocabularyTermRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -215,15 +275,24 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/ja/import': typeof JaImportRoute
   '/oauth/callback': typeof OauthCallbackRoute
   '/exams/': typeof ExamsIndexRoute
+  '/ja/': typeof JaIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
+  '/ja/grammar/import': typeof JaGrammarImportRoute
+  '/ja/idioms/import': typeof JaIdiomsImportRoute
+  '/ja/texts/import': typeof JaTextsImportRoute
+  '/ja/vocabulary/$term': typeof JaVocabularyTermRouteWithChildren
+  '/ja/vocabulary/import': typeof JaVocabularyImportRoute
   '/learning/content/new': typeof LearningContentNewRoute
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/ja/learn/': typeof JaLearnIndexRoute
+  '/ja/vocabulary/': typeof JaVocabularyIndexRoute
   '/learning/categories/': typeof LearningCategoriesIndexRoute
   '/learning/content/': typeof LearningContentIndexRoute
   '/learning/courses/': typeof LearningCoursesIndexRoute
@@ -235,6 +304,7 @@ export interface FileRoutesByFullPath {
   '/learning/texts/': typeof LearningTextsIndexRoute
   '/learning/vocab/': typeof LearningVocabIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
+  '/ja/vocabulary/$term/edit': typeof JaVocabularyTermEditRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
@@ -247,15 +317,24 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/ja/import': typeof JaImportRoute
   '/oauth/callback': typeof OauthCallbackRoute
   '/exams': typeof ExamsIndexRoute
+  '/ja': typeof JaIndexRoute
   '/learning': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
+  '/ja/grammar/import': typeof JaGrammarImportRoute
+  '/ja/idioms/import': typeof JaIdiomsImportRoute
+  '/ja/texts/import': typeof JaTextsImportRoute
+  '/ja/vocabulary/$term': typeof JaVocabularyTermRouteWithChildren
+  '/ja/vocabulary/import': typeof JaVocabularyImportRoute
   '/learning/content/new': typeof LearningContentNewRoute
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/ja/learn': typeof JaLearnIndexRoute
+  '/ja/vocabulary': typeof JaVocabularyIndexRoute
   '/learning/categories': typeof LearningCategoriesIndexRoute
   '/learning/content': typeof LearningContentIndexRoute
   '/learning/courses': typeof LearningCoursesIndexRoute
@@ -267,6 +346,7 @@ export interface FileRoutesByTo {
   '/learning/texts': typeof LearningTextsIndexRoute
   '/learning/vocab': typeof LearningVocabIndexRoute
   '/learning/writing': typeof LearningWritingIndexRoute
+  '/ja/vocabulary/$term/edit': typeof JaVocabularyTermEditRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
@@ -282,15 +362,24 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/stats': typeof StatsRoute
   '/exams/$examId': typeof ExamsExamIdRoute
+  '/ja/import': typeof JaImportRoute
   '/oauth/callback': typeof OauthCallbackRoute
   '/exams/': typeof ExamsIndexRoute
+  '/ja/': typeof JaIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/exams/results/$attemptId': typeof ExamsResultsAttemptIdRoute
   '/exams/session/$examId': typeof ExamsSessionExamIdRoute
+  '/ja/grammar/import': typeof JaGrammarImportRoute
+  '/ja/idioms/import': typeof JaIdiomsImportRoute
+  '/ja/texts/import': typeof JaTextsImportRoute
+  '/ja/vocabulary/$term': typeof JaVocabularyTermRouteWithChildren
+  '/ja/vocabulary/import': typeof JaVocabularyImportRoute
   '/learning/content/new': typeof LearningContentNewRoute
   '/learning/courses/$id': typeof LearningCoursesIdRouteWithChildren
   '/learning/flashcards/$deckId': typeof LearningFlashcardsDeckIdRoute
   '/learning/writing/practice': typeof LearningWritingPracticeRoute
+  '/ja/learn/': typeof JaLearnIndexRoute
+  '/ja/vocabulary/': typeof JaVocabularyIndexRoute
   '/learning/categories/': typeof LearningCategoriesIndexRoute
   '/learning/content/': typeof LearningContentIndexRoute
   '/learning/courses/': typeof LearningCoursesIndexRoute
@@ -302,6 +391,7 @@ export interface FileRoutesById {
   '/learning/texts/': typeof LearningTextsIndexRoute
   '/learning/vocab/': typeof LearningVocabIndexRoute
   '/learning/writing/': typeof LearningWritingIndexRoute
+  '/ja/vocabulary/$term/edit': typeof JaVocabularyTermEditRoute
   '/learning/content/$type/$id': typeof LearningContentTypeIdRoute
   '/learning/courses/$id/edit': typeof LearningCoursesIdEditRoute
   '/learning/flashcards/study/$deckId': typeof LearningFlashcardsStudyDeckIdRoute
@@ -318,15 +408,24 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/ja/import'
     | '/oauth/callback'
     | '/exams/'
+    | '/ja/'
     | '/learning/'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
+    | '/ja/grammar/import'
+    | '/ja/idioms/import'
+    | '/ja/texts/import'
+    | '/ja/vocabulary/$term'
+    | '/ja/vocabulary/import'
     | '/learning/content/new'
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/ja/learn/'
+    | '/ja/vocabulary/'
     | '/learning/categories/'
     | '/learning/content/'
     | '/learning/courses/'
@@ -338,6 +437,7 @@ export interface FileRouteTypes {
     | '/learning/texts/'
     | '/learning/vocab/'
     | '/learning/writing/'
+    | '/ja/vocabulary/$term/edit'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
@@ -350,15 +450,24 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/ja/import'
     | '/oauth/callback'
     | '/exams'
+    | '/ja'
     | '/learning'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
+    | '/ja/grammar/import'
+    | '/ja/idioms/import'
+    | '/ja/texts/import'
+    | '/ja/vocabulary/$term'
+    | '/ja/vocabulary/import'
     | '/learning/content/new'
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/ja/learn'
+    | '/ja/vocabulary'
     | '/learning/categories'
     | '/learning/content'
     | '/learning/courses'
@@ -370,6 +479,7 @@ export interface FileRouteTypes {
     | '/learning/texts'
     | '/learning/vocab'
     | '/learning/writing'
+    | '/ja/vocabulary/$term/edit'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
@@ -384,15 +494,24 @@ export interface FileRouteTypes {
     | '/settings'
     | '/stats'
     | '/exams/$examId'
+    | '/ja/import'
     | '/oauth/callback'
     | '/exams/'
+    | '/ja/'
     | '/learning/'
     | '/exams/results/$attemptId'
     | '/exams/session/$examId'
+    | '/ja/grammar/import'
+    | '/ja/idioms/import'
+    | '/ja/texts/import'
+    | '/ja/vocabulary/$term'
+    | '/ja/vocabulary/import'
     | '/learning/content/new'
     | '/learning/courses/$id'
     | '/learning/flashcards/$deckId'
     | '/learning/writing/practice'
+    | '/ja/learn/'
+    | '/ja/vocabulary/'
     | '/learning/categories/'
     | '/learning/content/'
     | '/learning/courses/'
@@ -404,6 +523,7 @@ export interface FileRouteTypes {
     | '/learning/texts/'
     | '/learning/vocab/'
     | '/learning/writing/'
+    | '/ja/vocabulary/$term/edit'
     | '/learning/content/$type/$id'
     | '/learning/courses/$id/edit'
     | '/learning/flashcards/study/$deckId'
@@ -418,7 +538,16 @@ export interface RootRouteChildren {
   PeriodicRoute: typeof PeriodicRoute
   SettingsRoute: typeof SettingsRoute
   StatsRoute: typeof StatsRoute
+  JaImportRoute: typeof JaImportRoute
   OauthCallbackRoute: typeof OauthCallbackRoute
+  JaIndexRoute: typeof JaIndexRoute
+  JaGrammarImportRoute: typeof JaGrammarImportRoute
+  JaIdiomsImportRoute: typeof JaIdiomsImportRoute
+  JaTextsImportRoute: typeof JaTextsImportRoute
+  JaVocabularyTermRoute: typeof JaVocabularyTermRouteWithChildren
+  JaVocabularyImportRoute: typeof JaVocabularyImportRoute
+  JaLearnIndexRoute: typeof JaLearnIndexRoute
+  JaVocabularyIndexRoute: typeof JaVocabularyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -486,6 +615,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningIndexRouteImport
       parentRoute: typeof LearningRoute
     }
+    '/ja/': {
+      id: '/ja/'
+      path: '/ja'
+      fullPath: '/ja/'
+      preLoaderRoute: typeof JaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/exams/': {
       id: '/exams/'
       path: '/'
@@ -498,6 +634,13 @@ declare module '@tanstack/react-router' {
       path: '/oauth/callback'
       fullPath: '/oauth/callback'
       preLoaderRoute: typeof OauthCallbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/import': {
+      id: '/ja/import'
+      path: '/ja/import'
+      fullPath: '/ja/import'
+      preLoaderRoute: typeof JaImportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/exams/$examId': {
@@ -584,6 +727,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningCategoriesIndexRouteImport
       parentRoute: typeof LearningRoute
     }
+    '/ja/vocabulary/': {
+      id: '/ja/vocabulary/'
+      path: '/ja/vocabulary'
+      fullPath: '/ja/vocabulary/'
+      preLoaderRoute: typeof JaVocabularyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/learn/': {
+      id: '/ja/learn/'
+      path: '/ja/learn'
+      fullPath: '/ja/learn/'
+      preLoaderRoute: typeof JaLearnIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/learning/writing/practice': {
       id: '/learning/writing/practice'
       path: '/writing/practice'
@@ -611,6 +768,41 @@ declare module '@tanstack/react-router' {
       fullPath: '/learning/content/new'
       preLoaderRoute: typeof LearningContentNewRouteImport
       parentRoute: typeof LearningRoute
+    }
+    '/ja/vocabulary/import': {
+      id: '/ja/vocabulary/import'
+      path: '/ja/vocabulary/import'
+      fullPath: '/ja/vocabulary/import'
+      preLoaderRoute: typeof JaVocabularyImportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/vocabulary/$term': {
+      id: '/ja/vocabulary/$term'
+      path: '/ja/vocabulary/$term'
+      fullPath: '/ja/vocabulary/$term'
+      preLoaderRoute: typeof JaVocabularyTermRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/texts/import': {
+      id: '/ja/texts/import'
+      path: '/ja/texts/import'
+      fullPath: '/ja/texts/import'
+      preLoaderRoute: typeof JaTextsImportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/idioms/import': {
+      id: '/ja/idioms/import'
+      path: '/ja/idioms/import'
+      fullPath: '/ja/idioms/import'
+      preLoaderRoute: typeof JaIdiomsImportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ja/grammar/import': {
+      id: '/ja/grammar/import'
+      path: '/ja/grammar/import'
+      fullPath: '/ja/grammar/import'
+      preLoaderRoute: typeof JaGrammarImportRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/exams/session/$examId': {
       id: '/exams/session/$examId'
@@ -646,6 +838,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/learning/content/$type/$id'
       preLoaderRoute: typeof LearningContentTypeIdRouteImport
       parentRoute: typeof LearningRoute
+    }
+    '/ja/vocabulary/$term/edit': {
+      id: '/ja/vocabulary/$term/edit'
+      path: '/edit'
+      fullPath: '/ja/vocabulary/$term/edit'
+      preLoaderRoute: typeof JaVocabularyTermEditRouteImport
+      parentRoute: typeof JaVocabularyTermRoute
     }
   }
 }
@@ -723,6 +922,17 @@ const LearningRouteWithChildren = LearningRoute._addFileChildren(
   LearningRouteChildren,
 )
 
+interface JaVocabularyTermRouteChildren {
+  JaVocabularyTermEditRoute: typeof JaVocabularyTermEditRoute
+}
+
+const JaVocabularyTermRouteChildren: JaVocabularyTermRouteChildren = {
+  JaVocabularyTermEditRoute: JaVocabularyTermEditRoute,
+}
+
+const JaVocabularyTermRouteWithChildren =
+  JaVocabularyTermRoute._addFileChildren(JaVocabularyTermRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -732,7 +942,16 @@ const rootRouteChildren: RootRouteChildren = {
   PeriodicRoute: PeriodicRoute,
   SettingsRoute: SettingsRoute,
   StatsRoute: StatsRoute,
+  JaImportRoute: JaImportRoute,
   OauthCallbackRoute: OauthCallbackRoute,
+  JaIndexRoute: JaIndexRoute,
+  JaGrammarImportRoute: JaGrammarImportRoute,
+  JaIdiomsImportRoute: JaIdiomsImportRoute,
+  JaTextsImportRoute: JaTextsImportRoute,
+  JaVocabularyTermRoute: JaVocabularyTermRouteWithChildren,
+  JaVocabularyImportRoute: JaVocabularyImportRoute,
+  JaLearnIndexRoute: JaLearnIndexRoute,
+  JaVocabularyIndexRoute: JaVocabularyIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,0 +1,260 @@
+# ===========================================
+# JLPT N5 日语词汇完整导入模板 (parent_id 版本)
+# ===========================================
+# 此模板演示完整的词汇结构，包含多音字、多义词、例句
+# 所有节点通过 id/parent_id 关联
+
+vocabulary:
+  # --------------------
+  # 示例 1: 食べる (单读音动词)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-001
+    content: 食べる
+    content_json:
+      lang: ja
+      pos: verb
+      jlpt_level: N5
+      common: true
+
+  - node_type: READING
+    id: reading-001
+    content: たべる
+    parent_id: term-001
+    content_json:
+      is_primary: true
+      accent: "②"
+      romaji: "taberu"
+
+  - node_type: SENSE
+    id: sense-001
+    parent_id: reading-001
+    content_json:
+      sense_order: 1
+      pos: ["v1", "vt"]  # 一类动词，他动词
+
+  - node_type: GLOSS
+    id: gloss-001
+    parent_id: sense-001
+    content: 吃
+    content_json:
+      lang: zh
+      priority: 1
+
+  - node_type: GLOSS
+    id: gloss-002
+    parent_id: sense-001
+    content: eat
+    content_json:
+      lang: en
+      priority: 2
+
+  - node_type: EXAMPLE
+    id: example-001
+    parent_id: sense-001
+    content: りんごを食べる
+    content_json:
+      translation_zh: 吃苹果
+      translation_en: eat an apple
+
+  # --------------------
+  # 示例 2: 日 (多音字 - にち/ひ/か)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-002
+    content: 日
+    content_json:
+      lang: ja
+      pos: noun
+      jlpt_level: N5
+      common: true
+
+  # 读音 1: にち (音读 - 表示"太阳、日期")
+  - node_type: READING
+    id: reading-002
+    content: にち
+    parent_id: term-002
+    content_json:
+      is_primary: true
+      accent: "④"
+      romaji: "nichi"
+      reading_type: onyomi
+
+  - node_type: SENSE
+    id: sense-002
+    parent_id: reading-002
+    content_json:
+      sense_order: 1
+
+  - node_type: GLOSS
+    id: gloss-003
+    parent_id: sense-002
+    content: 太阳；日，天
+    content_json:
+      lang: zh
+      priority: 1
+
+  - node_type: GLOSS
+    id: gloss-004
+    parent_id: sense-002
+    content: Sunday
+    content_json:
+      lang: en
+      priority: 2
+
+  - node_type: EXAMPLE
+    id: example-002
+    parent_id: sense-002
+    content: 毎日
+    content_json:
+      translation_zh: 每天
+      translation_en: every day
+
+  - node_type: EXAMPLE
+    id: example-003
+    parent_id: sense-002
+    content: 日本
+    content_json:
+      translation_zh: 日本
+      translation_en: Japan
+
+  # 读音 2: ひ (训读 - 表示"白昼、阳光")
+  - node_type: READING
+    id: reading-003
+    content: ひ
+    parent_id: term-002
+    content_json:
+      is_primary: false
+      accent: "②"
+      romaji: "hi"
+      reading_type: kunyomi
+
+  - node_type: SENSE
+    id: sense-003
+    parent_id: reading-003
+    content_json:
+      sense_order: 1
+
+  - node_type: GLOSS
+    id: gloss-005
+    parent_id: sense-003
+    content: 白昼，白天
+    content_json:
+      lang: zh
+      priority: 1
+
+  - node_type: GLOSS
+    id: gloss-006
+    parent_id: sense-003
+    content: sunlight
+    content_json:
+      lang: en
+      priority: 2
+
+  - node_type: EXAMPLE
+    id: example-004
+    parent_id: sense-003
+    content: 日が昇る
+    content_json:
+      translation_zh: 太阳升起
+      translation_en: the sun rises
+
+  # 读音 3: か (训读 - 接尾词，表示日期)
+  - node_type: READING
+    id: reading-004
+    content: か
+    parent_id: term-002
+    content_json:
+      is_primary: false
+      accent: "①"
+      romaji: "ka"
+      reading_type: kunyomi
+      note: 用于日期
+
+  - node_type: SENSE
+    id: sense-004
+    parent_id: reading-004
+    content_json:
+      sense_order: 1
+
+  - node_type: GLOSS
+    id: gloss-007
+    parent_id: sense-004
+    content: (接尾)日，号
+    content_json:
+      lang: zh
+      priority: 1
+
+  - node_type: EXAMPLE
+    id: example-005
+    parent_id: sense-004
+    content: 三日
+    content_json:
+      translation_zh: 三日，三号
+      translation_en: the 3rd (day)
+
+  # --------------------
+  # 示例 3: 大きい (形容词，带词形变化)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-003
+    content: 大きい
+    content_json:
+      lang: ja
+      pos: adjective
+      jlpt_level: N5
+
+  - node_type: READING
+    id: reading-005
+    content: おおきい
+    parent_id: term-003
+    content_json:
+      is_primary: true
+      accent: "③"
+      romaji: "ookii"
+
+  - node_type: SENSE
+    id: sense-005
+    parent_id: reading-005
+    content_json:
+      sense_order: 1
+
+  - node_type: GLOSS
+    id: gloss-008
+    parent_id: sense-005
+    content: 大的
+
+  # 词形变化
+  - node_type: FORM
+    id: form-001
+    parent_id: term-003
+    content: 大きく
+    content_json:
+      form_type: adverbial
+      usage: 修饰动词
+
+  - node_type: FORM
+    id: form-002
+    parent_id: term-003
+    content: 大きかった
+    content_json:
+      form_type: past
+      usage: 过去式
+
+  # --------------------
+  # 节点类型说明
+  # --------------------
+  # node_type 可选值：
+  # - TERM_ROOT: 词条根节点（单词本身）
+  # - READING: 读音节点（支持多音字）
+  # - SENSE: 义项节点（一词多义）
+  # - GLOSS: 释义节点（多语言翻译）
+  # - EXAMPLE: 例句节点
+  # - FORM: 词形变化节点（活用形）
+  #
+  # 关联规则：
+  # - READING.parent_id → TERM_ROOT.id
+  # - SENSE.parent_id → READING.id
+  # - GLOSS.parent_id → SENSE.id
+  # - EXAMPLE.parent_id → SENSE.id
+  # - FORM.parent_id → TERM_ROOT.id

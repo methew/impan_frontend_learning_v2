@@ -23,6 +23,7 @@ import {
   Tags,
   Layers,
   PenTool,
+  Languages,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
@@ -68,33 +69,32 @@ interface NavItem {
     icon: React.ElementType
     description?: string
   }[]
+  isDropdownOnly?: boolean  // 仅作为下拉菜单触发器，不跳转
 }
 
 function useNavItems(): NavItem[] {
   const { t } = useTranslation()
   return [
     { to: '/', label: t('nav.home'), icon: Home },
-    { 
-      to: '/learning/content', 
-      label: t('nav.learning'), 
-      icon: BookOpen,
-      children: [
-        // 学习内容
-        { to: '/learning/content', label: '学习内容', icon: BookOpen, description: '浏览全部学习资源' },
-        { to: '/learning/flashcards', label: '闪卡练习', icon: Layers, description: '记忆卡片复习' },
-        { to: '/learning/writing', label: '写作练习', icon: PenTool, description: '句子仿写练习' },
-        // 分隔线（在渲染时处理）
-        { to: '/learning/courses', label: '课程管理', icon: Library, description: '管理课程体系' },
-        { to: '/learning/vocab', label: '词汇管理', icon: TreeDeciduous, description: '词汇树形管理' },
-        { to: '/learning/grammar', label: '语法管理', icon: Scale, description: '语法点管理' },
-        { to: '/learning/idioms', label: '惯用语管理', icon: MessageCircle, description: '惯用语管理' },
-        { to: '/learning/texts', label: '课文管理', icon: FileText, description: '课文内容管理' },
-        { to: '/learning/categories', label: '学科管理', icon: Tags, description: '分类标签管理' },
-      ]
-    },
-    { to: '/exams', label: t('nav.exams'), icon: ClipboardList },
-    { to: '/periodic', label: t('nav.periodic'), icon: GraduationCap },
-    { to: '/stats', label: t('nav.stats'), icon: BarChart3 },
+    // { 
+    //   to: '#language', 
+    //   label: '语言学习', 
+    //   icon: Languages,
+    //   isDropdownOnly: true,
+    //   children: [
+    //     { to: '/ja', label: '日语', icon: BookOpen, description: '日本語学习 N5-N1' },
+    //     { to: '/en', label: '英语', icon: BookOpen, description: 'English学习' },
+    //   ]
+    // },
+    // { 
+    //   to: '#subject', 
+    //   label: '学科考试', 
+    //   icon: GraduationCap,
+    //   isDropdownOnly: true,
+    //   children: [
+    //     { to: '/engineer', label: '工程师考试', icon: GraduationCap, description: '工程师资格考试备考' },
+    //   ]
+    // },
   ]
 }
 
@@ -139,10 +139,10 @@ function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
             {t('login.title')}
           </Link>
           {navItems.map((item) => (
-            item.children ? (
-              <DropdownMenu key={item.to}>
+            item?.children ? (
+              <DropdownMenu key={item.to} modal={false}>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent data-[state=open]:bg-accent data-[state=open]:text-foreground">
+                  <button type="button" className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent data-[state=open]:bg-accent data-[state=open]:text-foreground">
                     <item.icon className="h-4 w-4" />
                     {item.label}
                     <ChevronDown className="h-3 w-3 ml-1" />
@@ -151,10 +151,12 @@ function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
                 <DropdownMenuContent align="start" className="w-64">
                   {item.children.map((child, index) => (
                     <div key={child.to}>
-                      {/* 在第三项后添加分隔线 */}
                       {index === 3 && <div className="h-px bg-border my-1" />}
-                      <DropdownMenuItem asChild className="cursor-pointer">
-                        <Link to={child.to} className="flex items-start gap-3 py-2">
+                      <DropdownMenuItem 
+                        className="cursor-pointer"
+                        onClick={() => { window.location.href = child.to }}
+                      >
+                        <div className="flex items-start gap-3 py-2">
                           <child.icon className="h-4 w-4 mt-0.5 shrink-0" />
                           <div className="flex flex-col">
                             <span className="text-sm font-medium">{child.label}</span>
@@ -162,7 +164,7 @@ function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
                               <span className="text-xs text-muted-foreground">{child.description}</span>
                             )}
                           </div>
-                        </Link>
+                        </div>
                       </DropdownMenuItem>
                     </div>
                   ))}
@@ -267,6 +269,7 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
                   return (
                     <div key={item.to}>
                       <button
+                        type="button"
                         onClick={() => toggleExpand(item.to)}
                         className="flex items-center justify-between w-full gap-3 px-3 py-3 rounded-md text-sm font-medium transition-colors hover:bg-accent"
                       >
@@ -323,6 +326,7 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
             
             <div className="p-2 border-t">
               <button
+                type="button"
                 onClick={() => logout()}
                 className="flex items-center gap-3 px-3 py-3 rounded-md text-sm font-medium text-red-600 w-full transition-colors hover:bg-red-50"
               >
@@ -430,6 +434,8 @@ function RootComponent() {
 
 // Root document component for SSR shell
 function RootDocument({ children }: { children: React.ReactNode }) {
+  // SSR 渲染：返回完整 HTML 文档
+  // 注意：客户端 hydration 时也会执行，但 React 会正确处理
   return (
     <html lang="zh-CN">
       <head>

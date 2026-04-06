@@ -1,0 +1,97 @@
+# ===========================================
+# JLPT N5 日语语法导入模板 (parent_id 版本)
+# ===========================================
+# 语法点结构：
+# GRAMMAR_ROOT → USAGE → EXAMPLE
+
+grammar:
+  # --------------------
+  # 示例 1: 〜は〜です (判断句)
+  # --------------------
+  - node_type: GRAMMAR_ROOT
+    id: grammar-001
+    content: 〜は〜です
+    content_json:
+      jlpt_level: N5
+      category: sentence_pattern
+      difficulty: 1
+
+  - node_type: USAGE
+    id: usage-001
+    parent_id: grammar-001
+    content_json:
+      usage_order: 1
+      pattern: N1 は N2 です
+
+  - node_type: GLOSS
+    id: gloss-g001
+    parent_id: usage-001
+    content: N1 是 N2
+    content_json:
+      lang: zh
+      explanation: 用于判断、说明某事物是什么
+
+  - node_type: EXAMPLE
+    id: example-g001
+    parent_id: usage-001
+    content: これは本です。
+    content_json:
+      translation_zh: 这是书。
+      translation_en: This is a book.
+      highlighted: [これ, は, です]
+
+  - node_type: EXAMPLE
+    id: example-g002
+    parent_id: usage-001
+    content: 私は学生です。
+    content_json:
+      translation_zh: 我是学生。
+      translation_en: I am a student.
+      highlighted: [私, は, です]
+
+  # --------------------
+  # 示例 2: 〜の (所属)
+  # --------------------
+  - node_type: GRAMMAR_ROOT
+    id: grammar-002
+    content: 〜の
+    content_json:
+      jlpt_level: N5
+      category: particle
+      difficulty: 1
+
+  - node_type: USAGE
+    id: usage-002
+    parent_id: grammar-002
+    content_json:
+      usage_order: 1
+      pattern: N1 の N2
+
+  - node_type: GLOSS
+    id: gloss-g003
+    parent_id: usage-002
+    content: N1 的 N2
+    content_json:
+      lang: zh
+      explanation: 表示所属、性质、内容等关系
+
+  - node_type: EXAMPLE
+    id: example-g003
+    parent_id: usage-002
+    content: 私の本
+    content_json:
+      translation_zh: 我的书
+      translation_en: my book
+      highlighted: [の]
+
+  # --------------------
+  # 节点类型说明
+  # --------------------
+  # - GRAMMAR_ROOT: 语法根节点
+  # - USAGE: 用法说明
+  # - EXAMPLE: 例句
+  # - VARIATION: 变体/相关表达
+  #
+  # 关联规则：
+  # - USAGE.parent_id → GRAMMAR_ROOT.id
+  # - EXAMPLE.parent_id → USAGE.id

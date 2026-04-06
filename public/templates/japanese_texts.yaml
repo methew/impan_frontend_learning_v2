@@ -1,0 +1,151 @@
+# ===========================================
+# 日语课文导入模板
+# ===========================================
+# 用于导入课文、会话、阅读材料
+
+texts:
+  # --------------------
+  # 示例 1: 基础会话
+  # --------------------
+  - node_type: TEXT_ROOT
+    id: text-001
+    content: 自我介绍
+    content_json:
+      level: N5
+      type: conversation
+      topic: self_introduction
+    
+    # 课文内容
+    content_nodes:
+      - node_type: SENTENCE
+        id: sentence-001
+        content: はじめまして。
+        content_json:
+          translation_zh: 初次见面。
+          translation_en: Nice to meet you.
+          
+      - node_type: SENTENCE
+        id: sentence-002
+        content: 私は田中です。
+        content_json:
+          translation_zh: 我是田中。
+          translation_en: I am Tanaka.
+          
+      - node_type: SENTENCE
+        id: sentence-003
+        content: どうぞよろしくお願いします。
+        content_json:
+          translation_zh: 请多关照。
+          translation_en: Please treat me well.
+    
+    # 词汇列表
+    vocabulary:
+      - term: はじめまして
+        reading: はじめまして
+        meaning: 初次见面
+      - term: 私
+        reading: わたし
+        meaning: 我
+      - term: 田中
+        reading: たなか
+        meaning: 田中（姓氏）
+      - term: どうぞよろしく
+        reading: どうぞよろしく
+        meaning: 请多关照
+
+  # --------------------
+  # 示例 2: 购物场景
+  # --------------------
+  - node_type: TEXT_ROOT
+    id: text-002
+    content: 買い物
+    content_json:
+      level: N5
+      type: conversation
+      topic: shopping
+    
+    content_nodes:
+      - node_type: SENTENCE
+        id: sentence-004
+        content: いらっしゃいませ。
+        content_json:
+          translation_zh: 欢迎光临。
+          translation_en: Welcome.
+          speaker: clerk
+          
+      - node_type: SENTENCE
+        id: sentence-005
+        content: すみません、このケーキはいくらですか。
+        content_json:
+          translation_zh: 请问，这个蛋糕多少钱？
+          translation_en: Excuse me, how much is this cake?
+          speaker: customer
+          
+      - node_type: SENTENCE
+        id: sentence-006
+        content: 300円です。
+        content_json:
+          translation_zh: 300日元。
+          translation_en: It's 300 yen.
+          speaker: clerk
+          
+      - node_type: SENTENCE
+        id: sentence-007
+        content: じゃ、これをください。
+        content_json:
+          translation_zh: 那请给我这个。
+          translation_en: Then, please give me this.
+          speaker: customer
+
+  # --------------------
+  # 示例 3: 阅读材料
+  # --------------------
+  - node_type: TEXT_ROOT
+    id: text-003
+    content: 私の一日
+    content_json:
+      level: N5
+      type: reading
+      topic: daily_life
+    
+    content_nodes:
+      - node_type: PARAGRAPH
+        id: para-001
+        content: |
+          私は毎朝６時に起きます。朝ご飯を食べて、８時に家を出ます。
+          学校は９時から始まります。午後４時に学校が終わります。
+          家に帰って、宿題をします。夜１０時に寝ます。
+        content_json:
+          translation_zh: |
+            我每天早上6点起床。吃了早饭，8点出门。
+            学校9点开始。下午4点放学。
+            回家后做作业。晚上10点睡觉。
+          translation_en: |
+            I wake up at 6 every morning. I eat breakfast and leave home at 8.
+            School starts at 9. School ends at 4 PM.
+            I return home and do homework. I go to bed at 10 PM.
+
+# ===========================================
+# 节点类型说明
+# ===========================================
+#
+# TEXT_ROOT: 课文根节点
+#   - content: 课文标题
+#   - content_json: 元数据（等级、类型、主题）
+#
+# SENTENCE: 句子节点（对话/课文中的单个句子）
+#   - content: 日文句子
+#   - content_json.translation_zh: 中文翻译
+#   - content_json.translation_en: 英文翻译
+#   - content_json.speaker: 说话人（对话场景）
+#
+# PARAGRAPH: 段落节点（阅读材料）
+#   - content: 段落内容（支持多行）
+#   - content_json.translation_zh: 中文翻译
+#
+# vocabulary: 词汇列表（可选）
+#   - term: 词条
+#   - reading: 读音
+#   - meaning: 释义
+#
+# ===========================================

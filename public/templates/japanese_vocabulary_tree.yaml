@@ -1,0 +1,319 @@
+# ===========================================
+# JLPT N5 日语词汇导入模板 - 树结构版本
+# ===========================================
+# 使用嵌套 children 结构，直观展示层级关系
+#
+# 结构：TERM_ROOT → readings[] → senses[] → (glosses | examples)
+
+vocabulary:
+  # --------------------
+  # 示例 1: 食べる (单读音动词)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-001
+    content: 食べる
+    content_json:
+      lang: ja
+      pos: verb
+      jlpt_level: N5
+      common: true
+    # 读音列表
+    readings:
+      - node_type: READING
+        id: reading-001
+        content: たべる
+        content_json:
+          is_primary: true
+          accent: "②"
+          romaji: "taberu"
+        # 义项列表
+        senses:
+          - node_type: SENSE
+            id: sense-001
+            content_json:
+              sense_order: 1
+              pos: ["v1", "vt"]
+            # 释义列表
+            glosses:
+              - node_type: GLOSS
+                id: gloss-001
+                content: 吃
+                content_json:
+                  lang: zh
+                  priority: 1
+              - node_type: GLOSS
+                id: gloss-002
+                content: eat
+                content_json:
+                  lang: en
+                  priority: 2
+            # 例句列表
+            examples:
+              - node_type: EXAMPLE
+                id: example-001
+                content: りんごを食べる
+                content_json:
+                  translation_zh: 吃苹果
+                  translation_en: eat an apple
+              - node_type: EXAMPLE
+                id: example-002
+                content: 朝ご飯を食べました
+                content_json:
+                  translation_zh: 吃了早饭
+                  translation_en: I ate breakfast
+
+  # --------------------
+  # 示例 2: 日 (多音字 - にち/ひ/か)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-002
+    content: 日
+    content_json:
+      lang: ja
+      pos: noun
+      jlpt_level: N5
+      common: true
+    # 多个读音
+    readings:
+      # 读音 1: にち
+      - node_type: READING
+        id: reading-002
+        content: にち
+        content_json:
+          is_primary: true
+          accent: "④"
+          romaji: "nichi"
+          reading_type: onyomi
+        senses:
+          - node_type: SENSE
+            id: sense-002
+            content_json:
+              sense_order: 1
+            glosses:
+              - node_type: GLOSS
+                id: gloss-003
+                content: 太阳；日，天
+                content_json:
+                  lang: zh
+              - node_type: GLOSS
+                id: gloss-004
+                content: sun; day
+                content_json:
+                  lang: en
+            examples:
+              - node_type: EXAMPLE
+                id: example-003
+                content: 毎日
+                content_json:
+                  translation_zh: 每天
+                  translation_en: every day
+              - node_type: EXAMPLE
+                id: example-004
+                content: 日本
+                content_json:
+                  translation_zh: 日本
+                  translation_en: Japan
+                  highlighted: [日]
+
+      # 读音 2: ひ
+      - node_type: READING
+        id: reading-003
+        content: ひ
+        content_json:
+          is_primary: false
+          accent: "②"
+          romaji: hi
+          reading_type: kunyomi
+        senses:
+          - node_type: SENSE
+            id: sense-003
+            content_json:
+              sense_order: 1
+            glosses:
+              - node_type: GLOSS
+                id: gloss-005
+                content: 白昼，白天
+                content_json:
+                  lang: zh
+              - node_type: GLOSS
+                id: gloss-006
+                content: sunlight; daytime
+                content_json:
+                  lang: en
+            examples:
+              - node_type: EXAMPLE
+                id: example-005
+                content: 日が昇る
+                content_json:
+                  translation_zh: 太阳升起
+                  translation_en: the sun rises
+
+      # 读音 3: か
+      - node_type: READING
+        id: reading-004
+        content: か
+        content_json:
+          is_primary: false
+          accent: "①"
+          romaji: ka
+          reading_type: kunyomi
+          note: 用于日期
+        senses:
+          - node_type: SENSE
+            id: sense-004
+            content_json:
+              sense_order: 1
+            glosses:
+              - node_type: GLOSS
+                id: gloss-007
+                content: (接尾)日，号
+                content_json:
+                  lang: zh
+            examples:
+              - node_type: EXAMPLE
+                id: example-006
+                content: 三日
+                content_json:
+                  translation_zh: 三日，三号
+                  translation_en: the 3rd (day)
+
+  # --------------------
+  # 示例 3: 大きい (形容词 + 变形)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-003
+    content: 大きい
+    content_json:
+      lang: ja
+      pos: adjective
+      jlpt_level: N5
+    readings:
+      - node_type: READING
+        id: reading-005
+        content: おおきい
+        content_json:
+          is_primary: true
+          accent: "③"
+          romaji: ookii
+        senses:
+          - node_type: SENSE
+            id: sense-005
+            content_json:
+              sense_order: 1
+              pos: ["adj-i"]
+            glosses:
+              - node_type: GLOSS
+                id: gloss-008
+                content: 大的
+                content_json:
+                  lang: zh
+              - node_type: GLOSS
+                id: gloss-009
+                content: big, large
+                content_json:
+                  lang: en
+            examples:
+              - node_type: EXAMPLE
+                id: example-007
+                content: 大きい家
+                content_json:
+                  translation_zh: 大房子
+                  translation_en: a big house
+    # 词形变化（与 readings 同级）
+    forms:
+      - node_type: FORM
+        id: form-001
+        content: 大きく
+        content_json:
+          form_type: adverbial
+          usage: 修饰动词
+        example:
+          content: 大きくなる
+          translation_zh: 变大
+
+      - node_type: FORM
+        id: form-002
+        content: 大きかった
+        content_json:
+          form_type: past
+          usage: 过去式
+        example:
+          content: 大きかった犬
+          translation_zh: 曾经很大的狗
+
+  # --------------------
+  # 示例 4: 行く (动词 + 更多变形)
+  # --------------------
+  - node_type: TERM_ROOT
+    id: term-004
+    content: 行く
+    content_json:
+      lang: ja
+      pos: verb
+      jlpt_level: N5
+    readings:
+      - node_type: READING
+        id: reading-006
+        content: いく
+        content_json:
+          is_primary: true
+          accent: "⓪"
+          romaji: iku
+        senses:
+          - node_type: SENSE
+            id: sense-006
+            content_json:
+              sense_order: 1
+              pos: ["v5k", "vi"]
+            glosses:
+              - node_type: GLOSS
+                content: 去，走
+                content_json:
+                  lang: zh
+              - node_type: GLOSS
+                content: go
+                content_json:
+                  lang: en
+            examples:
+              - node_type: EXAMPLE
+                content: 学校に行く
+                content_json:
+                  translation_zh: 去学校
+                  translation_en: go to school
+    forms:
+      - node_type: FORM
+        content: 行きます
+        content_json:
+          form_type: polite
+          formality: polite
+      - node_type: FORM
+        content: 行った
+        content_json:
+          form_type: past
+      - node_type: FORM
+        content: 行って
+        content_json:
+          form_type: te_form
+
+# ===========================================
+# 树结构说明
+# ===========================================
+#
+# TERM_ROOT (词条)
+# ├── content: 词条文本
+# ├── content_json: 元数据 (词性、等级等)
+# ├── readings[]: 读音列表（多音字支持）
+# │   ├── content: 假名
+# │   ├── content_json: 读音属性 (is_primary, accent)
+# │   └── senses[]: 义项列表（一词多义）
+# │       ├── glosses[]: 多语言释义
+# │       └── examples[]: 例句
+# └── forms[]: 词形变化列表（变形）
+#
+# 优势：
+# - 直观：一眼看清层级关系
+# - 便捷：修改一个词条只需在一个块内
+# - 聚合：readings[] 天然聚合多音字
+#
+# 适用：手动编辑 YAML、查看词汇结构
+# ===========================================
