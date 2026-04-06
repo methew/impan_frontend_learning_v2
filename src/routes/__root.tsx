@@ -4,8 +4,8 @@ import { Toaster } from 'sonner'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import '@/styles.css'
-import { 
-  BookOpen, 
+import {
+  BookOpen,
   GraduationCap,
   ClipboardList,
   BarChart3,
@@ -47,7 +47,7 @@ interface AuthContextType {
   refreshAuth: () => void
 }
 
-const AuthContext = createContext<AuthContextType>({ isAuth: null, refreshAuth: () => {} })
+const AuthContext = createContext<AuthContextType>({ isAuth: null, refreshAuth: () => { } })
 
 // Create Query Client
 const queryClient = new QueryClient({
@@ -152,7 +152,7 @@ function TopNavigation({ isAuth }: { isAuth: boolean | null }) {
                   {item.children.map((child, index) => (
                     <div key={child.to}>
                       {index === 3 && <div className="h-px bg-border my-1" />}
-                      <DropdownMenuItem 
+                      <DropdownMenuItem
                         className="cursor-pointer"
                         onClick={() => { window.location.href = child.to }}
                       >
@@ -207,7 +207,7 @@ function UserMenu() {
       const userInfo = await getCurrentUser()
       setUser(userInfo)
       setLoading(false)
-      
+
       // 未登录时跳转到登录页
       if (!userInfo) {
         navigate({ to: '/login' })
@@ -241,38 +241,61 @@ function UserMenu() {
   }
 
   // 获取用户名的首字母或前两个字符作为头像
-  const userInitial = user.username?.charAt(0).toUpperCase() || 
-                      user.email?.charAt(0).toUpperCase() || 'U'
+  const userInitial = user.username?.charAt(0).toUpperCase() ||
+    user.email?.charAt(0).toUpperCase() || 'U'
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2">
-          <Avatar className="h-8 w-8">
-            <AvatarFallback className="text-xs bg-primary text-primary-foreground">
-              {userInitial}
-            </AvatarFallback>
-          </Avatar>
-          <span className="hidden sm:inline max-w-[100px] truncate">
-            {user.username || user.email}
-          </span>
-          <ChevronDown className="size-3" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
-        <div className="px-2 py-1.5 text-sm font-medium text-muted-foreground border-b mb-1">
+    <div className='flex gap-4'>
+      <Button
+        size="lg" variant="outline"
+      >
+
+        <span className="hidden sm:inline max-w-25 truncate">
           {user.username || user.email}
-        </div>
-        <DropdownMenuItem onClick={() => navigate({ to: '/settings' })}>
-          <Settings className="mr-2 size-4" />
-          {t('nav.settings')}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleLogout} className="text-red-600">
-          <LogOut className="mr-2 size-4" />
-          {t('common.logout')}
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        </span>
+
+      </Button>
+      <Button
+        size="lg" variant="destructive"
+        onClick={() => {
+          if (window.confirm("是否退出")) {
+            handleLogout()
+          }
+        }}
+      >
+        退出
+      </Button>
+    </div>
+
+
+
+    //  <DropdownMenuTrigger asChild>
+    //       <Button variant="ghost" size="sm" className="gap-2">
+    //         <Avatar className="h-8 w-8">
+    //           <AvatarFallback className="text-xs bg-primary text-primary-foreground">
+    //             {userInitial}
+    //           </AvatarFallback>
+    //         </Avatar>
+    //         <span className="hidden sm:inline max-w-25 truncate">
+    //           {user.username || user.email}
+    //         </span>
+    //         <ChevronDown className="size-3" />
+    //       </Button>
+    //     </DropdownMenuTrigger> 
+    //   <DropdownMenuContent align="end" className="w-56">
+    //     <div className="px-2 py-1.5 text-sm font-medium text-muted-foreground border-b mb-1">
+    //       {user.username || user.email}
+    //     </div>
+    //     <DropdownMenuItem onClick={() => navigate({ to: '/settings' })}>
+    //       <Settings className="mr-2 size-4" />
+    //       {t('nav.settings')}
+    //     </DropdownMenuItem>
+    //     <DropdownMenuItem onClick={handleLogout} className="text-red-600">
+    //       <LogOut className="mr-2 size-4" />
+    //       {t('common.logout')}
+    //     </DropdownMenuItem>
+    //   </DropdownMenuContent>
+    // </DropdownMenu>
   )
 }
 
@@ -311,12 +334,12 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
                 {t('login.title')}
               </Link>
             </div>
-            
+
             <nav className="flex-1 overflow-y-auto p-2">
               {navItems.map((item) => {
                 const Icon = item.icon
                 const isExpanded = expandedItems.has(item.to)
-                
+
                 if (item.children) {
                   return (
                     <div key={item.to}>
@@ -331,7 +354,7 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
                         </div>
                         <ChevronDown className={cn("size-4 transition-transform", isExpanded && "rotate-180")} />
                       </button>
-                      
+
                       {isExpanded && (
                         <div className="ml-4 border-l-2 pl-2 my-1">
                           {item.children.map((child, index) => (
@@ -361,7 +384,7 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
                     </div>
                   )
                 }
-                
+
                 return (
                   <Link
                     key={item.to}
@@ -375,7 +398,7 @@ function MobileNavigation({ navItems }: { navItems: NavItem[] }) {
                 )
               })}
             </nav>
-            
+
             <div className="p-2 border-t">
               <button
                 type="button"
