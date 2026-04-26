@@ -446,6 +446,13 @@ function RootComponent() {
     }
   }, [isAuth])
 
+  // 保存当前路由到 sessionStorage
+  useEffect(() => {
+    if (currentPath !== '/login' && !currentPath.startsWith('/oauth/')) {
+      sessionStorage.setItem('last_route', currentPath)
+    }
+  }, [currentPath])
+
   // Show loading while checking auth
   if (isAuth === null) {
     return (
